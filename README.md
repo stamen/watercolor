@@ -52,16 +52,6 @@ Software Dependencies (required)
 
 		sudo apt-get install python
 
-* The GDAL libraries and utlities (http://www.gdal.org/)
-
-		sudo apt-get install gdal-bin
-		
-* Imposm version 2 (http://www.imposm.org)
-
-		sudo apt-get install build-essential python-dev protobuf-compiler libprotobuf-dev libtokyocabinet-dev python-psycopg2 libgeos-c1
-		sudo pip install imposm
-
-
 * Mapnik and the Mapnik Python bindings (http://mapnik.org/).
 
 		sudo apt-get install python-mapnik
@@ -75,27 +65,43 @@ Software Dependencies (required)
 		sudo pip install cssutils
 		sudo pip install cascadenik
 
+* The Requests Python libraries (http://docs.python-requests.org/en/latest/)
 
-
-Software Dependencies (optional)
---
-
-* The TileStache Python libraries (http://pypi.python.org/pypi/TileStache/)
-
-		sudo pip install tilestache
-
-* The gunicorn WSGI web server framework (http://www.gunicorn.org/)
-
-		sudo pip install gunicorn
+    sudo pip install requests
 
 * The pyproj Python libraries, required for using using the 'mapnik-render.py' script (http://pypi.python.org/pypi/pyproj)
 
 		sudo pip install pyproj
 
-* The Python Imaging Libraries, required for using the 'mapnik-render.py' script (http://pypi.python.org/pypi/PIL/)
+* The Python Imaging Libraries (PIL), required for using the 'mapnik-render.py' script (http://pypi.python.org/pypi/PIL/)
 
 		sudo apt-get install python-imaging
 
+* The SciPy Python libraries, required for using the 'mapnik-render.py' script (http://www.scipy.org/)
+
+		sudo pip install scipy
+
+
+* The TileStache Python libraries (http://pypi.python.org/pypi/TileStache/)
+
+		sudo pip install tilestache
+
+
+The following are requirements for Toner, which may be similar to the requirements for Watercolor:
+--
+
+* The GDAL libraries and utlities (http://www.gdal.org/)
+
+		sudo apt-get install gdal-bin
+		
+* Imposm version 2 (http://www.imposm.org)
+
+		sudo apt-get install build-essential python-dev protobuf-compiler libprotobuf-dev libtokyocabinet-dev python-psycopg2 libgeos-c1
+		sudo pip install imposm
+
+* The gunicorn WSGI web server framework (http://www.gunicorn.org/)
+
+		sudo pip install gunicorn
 
 Data Dependencies (required)
 --
@@ -190,16 +196,16 @@ Natural Earth
 --
 
 NaturalEarth is a public domain map dataset of various cultural and vector
-datasets. It is available for download at: http://www.naturalearthdata.com/. Toner uses 
+datasets. It is available for download at: http://www.naturalearthdata.com/. Watercolor uses 
 Natural Earth 2.0 (released November 2012) and should be compatible with any future minor 
 releases (2.x).
 
-Toner uses many, but not all of the datasets in NaturalEarth, so you should use this script 
-(located in the main toner directory) to download all the datasets that Toner requires:
+Watercolor uses many, but not all of the datasets in NaturalEarth, so you should use this script 
+(located in the main watercolor directory) to download all the datasets that Watercolor requires:
 
-	download_natural_earth_data.sh
+	download_data.sh
 
-This script downloads the 31 NaturalEarth datasets Toner uses as shapefiles, and 
+This script downloads the NaturalEarth datasets Watercolor uses as shapefiles, and 
 reprojects them from EPSG:4326 (WGS84 lat/lon) into EPSG:900913 (sometimes known as 
 "spherical mercator" which really just means "good for making map tiles"). The 
 downloaded and reprojected files are stored in the 'toner/mapnik/shp/natural_earth/'
