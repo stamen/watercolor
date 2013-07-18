@@ -20,12 +20,6 @@
     <!ENTITY osm_user "osm">
     <!ENTITY osm_pass "">
 
-    <!ENTITY included_data_host "localhost">
-    <!ENTITY included_data_port "5432">
-    <!ENTITY included_data_name "toner">
-    <!ENTITY included_data_user "osm">
-    <!ENTITY included_data_pass "">
-
 ]>
 <Map srs="&map_srs;">
     <Stylesheet><![CDATA[
