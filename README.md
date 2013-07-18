@@ -8,17 +8,15 @@ Getting Started
 
 Watercolor is made up of several parts. Watercolor primarily uses data from two sources: Natural 
 Earth 2.0 and OpenStreetMap. 
-Here I will explain the parts in more detail. To be continued.
+Here I will explain the parts in more detail. TODO: To be continued.
 
-Note that most of the information below refers to Toner, not Watercolor. This will be updated shortly.
+ Getting started with Watercolor involves three main stages:
 
- Getting started with Toner involves three main stages:
-
-1. Install Toner and all its dependencies (both data and software). The current document 
+1. Install Watercolor and all its dependencies (both data and software). The current document 
 (the one you're reading right now) explains how to do this. Read this first.
  
 2. After you have everything installed, you should go to the README file in the 'mapnik' 
-directory to learn about Cascadenik and to start generating the "Toner" Mapnik stylesheets. 
+directory to learn about Cascadenik and to start generating the "Watercolor" Mapnik stylesheets. 
 Do this second. At this point you will be able to generate static map images.
 
 3. Then, after you have built your Mapnik stylesheets and tested them, you should go to the 
@@ -32,7 +30,7 @@ Dependencies
 The short version is: There are a lot.
 
 The long version is: The gritty details of installing some of the tools that
-Toner uses are outside the scope of this document. We've tried to give you the
+Watercolor uses are outside the scope of this document. We've tried to give you the
 shape of what you need to do and linked to the available documentation elsewhere. 
 The instructions provided should work on ubuntu 12.04. You may need to make some 
 modifications depending on your specific operating system and hardware.
@@ -115,6 +113,8 @@ Data Dependencies (required)
   (EPSG:900913). See below for details. This database also includes tables for City labels and 
   townspots in EPSG:900913 (included here). Use the included import script (see below).
   
+  [Yes, in this case the database should be called 'toner' not 'watercolor']
+  
 A quick guide to setting up your databases (for PostgreSQL 9.x):
 
 	createuser --no-superuser --no-createdb --no-createrole osm
@@ -169,29 +169,6 @@ Load it into your planet_osm database:
 
 	shp2pgsql processed_p.shp coastline | psql -U osm planet_osm
 
-OSM-related
---
-
-Toner uses a table in the 'planet_osm' database containing OSM-derived data called
-'planet_osm_motorways'. There's a handy PGSQL script called 'motorways.pgsql' in
-the 'toner/osm/' directory that you can run (once you've set up your planet_osm 
-tables) to create the new table. Run the script like so:
-
-	psql -U osm planet_osm < motorways.pgsql
-	
-Toner also uses a few other OSM-derived tables which are extracted from the planet file 
-(or extract) and imported to the database using Imposm. From the 'mapnik/imposm/' 
-directory, run this command:
-
-	imposm -m mapping.py -U osm -d toner --proj=EPSG:900913 -c 12 --read --write /mnt/tonerdata/japan-latest.osm.pbf 
-
-Followed by this:
-
-	imposm -m mapping.py -U osm -d toner --proj=EPSG:900913 -c 12 --deploy-production-tables /mnt/tonerdata/japan-latest.osm.pbf
-	
-This will create tables for green_areas, grey_areas, buildings, aeroways, waterways, 
-and water_areas.
-
 Natural Earth
 --
 
@@ -208,34 +185,21 @@ Watercolor uses many, but not all of the datasets in NaturalEarth, so you should
 This script downloads the NaturalEarth datasets Watercolor uses as shapefiles, and 
 reprojects them from EPSG:4326 (WGS84 lat/lon) into EPSG:900913 (sometimes known as 
 "spherical mercator" which really just means "good for making map tiles"). The 
-downloaded and reprojected files are stored in the 'toner/mapnik/shp/natural_earth/'
+downloaded and reprojected files are stored in the 'watercolor/mapnik/shp/'
 directory, in compressed (zip) format. You do not need to unzip these files or load
 them into your database: mapnik can read them as-is.
 
-
-Included data
+Data overview
 --
+An overview of data sources, storage locations, download and import methods (in progress)
 
-We have included some data sources as part of the repository.
 
-We've prepped city labels with [Dymo](https://github.com/migurski/dymo) at several
-zoom levels so you don't have to (it takes weeks). The resulting shapefiles (SHP and
-related extensions) should be imported into PostGIS for optimal performance and we 
-include a script for that. The MML file assumes this step has been accomplished.
-
-These labels and points are stored as shapefiles in the 'mapnik/shp/labels/' directory.
-
-Import them using this script:
-
-	import_toner_v2_shps.sh
-	
-This script also imports a few other assorted data sources included in the 'mapnik/shp' 
-directory, such as continent labels and airports.
-
-This import script creates separate tables containing city labels for each continent. To 
-join these tables together into a single table for each zoom level, run this from the 
-'mapnik' directory:
-
-	psql -U osm -f city_labels.pgsql toner
+| Data              | Zoom  | Source    | Download method | Input method        | Storage loc |
+| ----------------- | ----- | --------- | --------- | ------------------- | ----------- |
+| Coastline (low z) | 1-7   | NatEarth  | dl script |                     | Zipped shp  |
+| Coastline (high z)| 8-19  | OSM       | wget url  | shp2pgsql           | toner db    |
+| Lakes (TODO)      | ???   | NatEarth  | dl script | n/a                 | Zipped shp  |
+| Roads (low z)     | 6-8   | NatEarth  | dl script | n/a                 | Zipped shp  |
+| Roads (high z)    | 9-19  | OSM       | wget url  | osm2pgsql           | planet db   |
 
 
