@@ -1,0 +1,7 @@
+*.pyc
+cache
+test-area-timing.txt
+test-area-*.png
+test-area-*.jpg
+mask_set_*/*.xml
+mask_set_*/*.mml
