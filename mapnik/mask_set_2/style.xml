@@ -1,0 +1,1664 @@
+<Map background-color="rgb(0,0,255)" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+  <Style name="line style 165">
+    <Rule name="rule 140">
+      <Filter>(([kind]='highway') and ([render]='outline'))</Filter>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <MaxScaleDenominator>749999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">5</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 141">
+      <Filter>(([kind]='major_road') and ([render]='outline'))</Filter>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <MaxScaleDenominator>749999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">4</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 142">
+      <Filter>(([kind]='highway') and ([render]='inline'))</Filter>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <MaxScaleDenominator>1499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">7</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 143">
+      <Filter>(([kind]='highway') and ([render]='outline'))</Filter>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <MaxScaleDenominator>1499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">5</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 144">
+      <Filter>(([kind]='major_road') and ([render]='outline'))</Filter>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <MaxScaleDenominator>1499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,255)</CssParameter>
+        <CssParameter name="stroke-width">4</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+  </Style>
+  <Style name="line style 172">
+    <Rule name="rule 145">
+      <Filter>(([kind]='highway') and ([render]='outline'))</Filter>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <MaxScaleDenominator>399999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">5.5</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 146">
+      <Filter>(([kind]='major_road') and ([render]='outline'))</Filter>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <MaxScaleDenominator>399999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">4</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+  </Style>
+  <Style name="line style 179">
+    <Rule name="rule 147">
+      <Filter>((not (([is_link]='no')) and ([kind]='major_road')) and ([render]='outline'))</Filter>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <MaxScaleDenominator>199999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">4</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 148">
+      <Filter>((([is_link]='no') and ([kind]='highway')) and ([render]='outline'))</Filter>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <MaxScaleDenominator>199999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">6.25</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 149">
+      <Filter>((([is_link]='no') and ([kind]='major_road')) and ([render]='outline'))</Filter>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <MaxScaleDenominator>199999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">4</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+  </Style>
+  <Style name="line style 186">
+    <Rule name="rule 150">
+      <Filter>((not (([is_link]='no')) and ([kind]='major_road')) and ([render]='outline'))</Filter>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <MaxScaleDenominator>99999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">4</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 151">
+      <Filter>((([is_link]='no') and ([kind]='highway')) and ([render]='outline'))</Filter>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <MaxScaleDenominator>99999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">7.5</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 152">
+      <Filter>((([is_link]='no') and ([kind]='major_road')) and ([render]='outline'))</Filter>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <MaxScaleDenominator>99999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">4</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+  </Style>
+  <Style name="line style 193">
+    <Rule name="rule 153">
+      <Filter>(([kind]='highway') and ([render]='outline'))</Filter>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <MaxScaleDenominator>49999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 154">
+      <Filter>(([kind]='major_road') and ([render]='outline'))</Filter>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <MaxScaleDenominator>49999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">5</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+  </Style>
+  <Style name="line style 200">
+    <Rule name="rule 155">
+      <Filter>(([kind]='highway') and ([render]='outline'))</Filter>
+      <MaxScaleDenominator>2499</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">28</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 156">
+      <Filter>(([kind]='major_road') and ([render]='outline'))</Filter>
+      <MaxScaleDenominator>2499</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">19</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 157">
+      <Filter>(([kind]='minor_road') and ([render]='outline'))</Filter>
+      <MaxScaleDenominator>2499</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">13</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 158">
+      <Filter>(([kind]='highway') and ([render]='outline'))</Filter>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <MaxScaleDenominator>4999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">15</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 159">
+      <Filter>(([kind]='major_road') and ([render]='outline'))</Filter>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <MaxScaleDenominator>4999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">13</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 160">
+      <Filter>(([kind]='minor_road') and ([render]='outline'))</Filter>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <MaxScaleDenominator>4999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">7</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 161">
+      <Filter>(([kind]='highway') and ([render]='outline'))</Filter>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <MaxScaleDenominator>12499</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">9</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 162">
+      <Filter>(([kind]='major_road') and ([render]='outline'))</Filter>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <MaxScaleDenominator>12499</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">7</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 163">
+      <Filter>(([kind]='minor_road') and ([render]='outline'))</Filter>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <MaxScaleDenominator>12499</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">4</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 164">
+      <Filter>(([kind]='highway') and ([render]='outline'))</Filter>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <MaxScaleDenominator>24999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 165">
+      <Filter>(([kind]='major_road') and ([render]='outline'))</Filter>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <MaxScaleDenominator>24999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">5.5</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 166">
+      <Filter>(([kind]='minor_road') and ([render]='outline'))</Filter>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <MaxScaleDenominator>24999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke-width">3</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+  </Style>
+  <Style name="line style 58">
+    <Rule name="rule 27">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]&lt;3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 28">
+      <Filter>(((not (([roadtype]='Beltway')) and ([scalerank]&gt;3)) and ([scalerank]&lt;4)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 29">
+      <Filter>(((not (([roadtype]='Beltway')) and ([scalerank]&gt;4)) and ([scalerank]&lt;=5)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 30">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=3)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 31">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 32">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=4)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 33">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=4)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 34">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]&lt;3)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 35">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]&lt;3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 36">
+      <Filter>(((([roadtype]='Beltway') and ([scalerank]&gt;3)) and ([scalerank]&lt;4)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 37">
+      <Filter>(((([roadtype]='Beltway') and ([scalerank]&gt;3)) and ([scalerank]&lt;4)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 38">
+      <Filter>(((([roadtype]='Beltway') and ([scalerank]&gt;4)) and ([scalerank]&lt;=5)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 39">
+      <Filter>(((([roadtype]='Beltway') and ([scalerank]&gt;4)) and ([scalerank]&lt;=5)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 40">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=3)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 41">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 42">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=4)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 43">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=4)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 44">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]&gt;5)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 45">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]&gt;5)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 46">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=3)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>12500000</MinScaleDenominator>
+      <MaxScaleDenominator>24999999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">2.85</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 47">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>12500000</MinScaleDenominator>
+      <MaxScaleDenominator>24999999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">2.85</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 48">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=3)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>12500000</MinScaleDenominator>
+      <MaxScaleDenominator>24999999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">2.85</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 49">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>12500000</MinScaleDenominator>
+      <MaxScaleDenominator>24999999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">2.85</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+  </Style>
+  <Style name="line style 65">
+    <Rule name="rule 50">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]&lt;3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 51">
+      <Filter>(((not (([roadtype]='Beltway')) and ([scalerank]&gt;3)) and ([scalerank]&lt;4)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 52">
+      <Filter>(((not (([roadtype]='Beltway')) and ([scalerank]&gt;4)) and ([scalerank]&lt;=5)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 53">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=3)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 54">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 55">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=4)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 56">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=4)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 57">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]&lt;3)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 58">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]&lt;3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 59">
+      <Filter>(((([roadtype]='Beltway') and ([scalerank]&gt;3)) and ([scalerank]&lt;4)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 60">
+      <Filter>(((([roadtype]='Beltway') and ([scalerank]&gt;3)) and ([scalerank]&lt;4)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 61">
+      <Filter>(((([roadtype]='Beltway') and ([scalerank]&gt;4)) and ([scalerank]&lt;=5)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 62">
+      <Filter>(((([roadtype]='Beltway') and ([scalerank]&gt;4)) and ([scalerank]&lt;=5)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 63">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=3)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 64">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 65">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=4)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 66">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=4)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 67">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]&gt;5)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 68">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]&gt;5)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 69">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=3)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>12500000</MinScaleDenominator>
+      <MaxScaleDenominator>24999999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">2.85</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 70">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>12500000</MinScaleDenominator>
+      <MaxScaleDenominator>24999999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">2.85</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 71">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=3)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>12500000</MinScaleDenominator>
+      <MaxScaleDenominator>24999999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">2.85</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 72">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>12500000</MinScaleDenominator>
+      <MaxScaleDenominator>24999999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">2.85</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+  </Style>
+  <Style name="line style 72">
+    <Rule name="rule 73">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]&lt;3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 74">
+      <Filter>(((not (([roadtype]='Beltway')) and ([scalerank]&gt;3)) and ([scalerank]&lt;4)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 75">
+      <Filter>(((not (([roadtype]='Beltway')) and ([scalerank]&gt;4)) and ([scalerank]&lt;=5)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 76">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=3)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 77">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 78">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=4)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 79">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=4)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 80">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]&lt;3)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 81">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]&lt;3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 82">
+      <Filter>(((([roadtype]='Beltway') and ([scalerank]&gt;3)) and ([scalerank]&lt;4)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 83">
+      <Filter>(((([roadtype]='Beltway') and ([scalerank]&gt;3)) and ([scalerank]&lt;4)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 84">
+      <Filter>(((([roadtype]='Beltway') and ([scalerank]&gt;4)) and ([scalerank]&lt;=5)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 85">
+      <Filter>(((([roadtype]='Beltway') and ([scalerank]&gt;4)) and ([scalerank]&lt;=5)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 86">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=3)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 87">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 88">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=4)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 89">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=4)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 90">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]&gt;5)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 91">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]&gt;5)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 92">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=3)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>12500000</MinScaleDenominator>
+      <MaxScaleDenominator>24999999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">2.85</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 93">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>12500000</MinScaleDenominator>
+      <MaxScaleDenominator>24999999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">2.85</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 94">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=3)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>12500000</MinScaleDenominator>
+      <MaxScaleDenominator>24999999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">2.85</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 95">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>12500000</MinScaleDenominator>
+      <MaxScaleDenominator>24999999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">2.85</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+  </Style>
+  <Style name="line style 79">
+    <Rule name="rule 96">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]&lt;3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 97">
+      <Filter>(((not (([roadtype]='Beltway')) and ([scalerank]&gt;3)) and ([scalerank]&lt;4)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 98">
+      <Filter>(((not (([roadtype]='Beltway')) and ([scalerank]&gt;4)) and ([scalerank]&lt;=5)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 99">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=3)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 100">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 101">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=4)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 102">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=4)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 103">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]&lt;3)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 104">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]&lt;3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 105">
+      <Filter>(((([roadtype]='Beltway') and ([scalerank]&gt;3)) and ([scalerank]&lt;4)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 106">
+      <Filter>(((([roadtype]='Beltway') and ([scalerank]&gt;3)) and ([scalerank]&lt;4)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 107">
+      <Filter>(((([roadtype]='Beltway') and ([scalerank]&gt;4)) and ([scalerank]&lt;=5)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 108">
+      <Filter>(((([roadtype]='Beltway') and ([scalerank]&gt;4)) and ([scalerank]&lt;=5)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 109">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=3)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 110">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 111">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=4)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 112">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=4)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 113">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]&gt;5)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 114">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]&gt;5)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">3.8</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 115">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=3)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>12500000</MinScaleDenominator>
+      <MaxScaleDenominator>24999999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">2.85</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 116">
+      <Filter>((not (([roadtype]='Beltway')) and ([scalerank]=3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>12500000</MinScaleDenominator>
+      <MaxScaleDenominator>24999999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">2.85</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 117">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=3)) and not (([type_2]='Expressway')))</Filter>
+      <MinScaleDenominator>12500000</MinScaleDenominator>
+      <MaxScaleDenominator>24999999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">2.85</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule name="rule 118">
+      <Filter>((([roadtype]='Beltway') and ([scalerank]=3)) and ([type_2]='Expressway'))</Filter>
+      <MinScaleDenominator>12500000</MinScaleDenominator>
+      <MaxScaleDenominator>24999999</MaxScaleDenominator>
+      <LineSymbolizer>
+        <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+        <CssParameter name="stroke-width">2.85</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+  </Style>
+  <Style name="polygon style 1">
+    <Rule name="rule 1">
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+  </Style>
+  <Style name="polygon style 155">
+    <Rule name="rule 119">
+      <Filter>([area]&lt;=1000)</Filter>
+      <MaxScaleDenominator>2499</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 120">
+      <Filter>(([area]&gt;1000) and ([area]&lt;=4000))</Filter>
+      <MaxScaleDenominator>2499</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 121">
+      <Filter>(([area]&gt;4000) and ([area]&lt;=6000))</Filter>
+      <MaxScaleDenominator>2499</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 122">
+      <Filter>(([area]&gt;6000) and ([area]&lt;=8000))</Filter>
+      <MaxScaleDenominator>2499</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 123">
+      <Filter>(([area]&gt;8000) and ([area]&lt;=10000))</Filter>
+      <MaxScaleDenominator>2499</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 124">
+      <Filter>([area]&gt;10000)</Filter>
+      <MaxScaleDenominator>2499</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 125">
+      <Filter>(([area]&gt;1000) and ([area]&lt;=4000))</Filter>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <MaxScaleDenominator>4999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 126">
+      <Filter>(([area]&gt;4000) and ([area]&lt;=6000))</Filter>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <MaxScaleDenominator>4999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 127">
+      <Filter>(([area]&gt;6000) and ([area]&lt;=8000))</Filter>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <MaxScaleDenominator>4999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 128">
+      <Filter>(([area]&gt;8000) and ([area]&lt;=10000))</Filter>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <MaxScaleDenominator>4999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 129">
+      <Filter>([area]&gt;10000)</Filter>
+      <MinScaleDenominator>2500</MinScaleDenominator>
+      <MaxScaleDenominator>4999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 130">
+      <Filter>(([area]&gt;4000) and ([area]&lt;=6000))</Filter>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <MaxScaleDenominator>12499</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 131">
+      <Filter>(([area]&gt;6000) and ([area]&lt;=8000))</Filter>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <MaxScaleDenominator>12499</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 132">
+      <Filter>(([area]&gt;8000) and ([area]&lt;=10000))</Filter>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <MaxScaleDenominator>12499</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 133">
+      <Filter>([area]&gt;10000)</Filter>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <MaxScaleDenominator>12499</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 134">
+      <Filter>(([area]&gt;6000) and ([area]&lt;=8000))</Filter>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <MaxScaleDenominator>24999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 135">
+      <Filter>(([area]&gt;8000) and ([area]&lt;=10000))</Filter>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <MaxScaleDenominator>24999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 136">
+      <Filter>([area]&gt;10000)</Filter>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <MaxScaleDenominator>24999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 137">
+      <Filter>(([area]&gt;8000) and ([area]&lt;=10000))</Filter>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <MaxScaleDenominator>49999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 138">
+      <Filter>([area]&gt;10000)</Filter>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <MaxScaleDenominator>49999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 139">
+      <Filter>([area]&gt;10000)</Filter>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <MaxScaleDenominator>99999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,255,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+  </Style>
+  <Style name="polygon style 27">
+    <Rule name="rule 3">
+      <MinScaleDenominator>100000000</MinScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+  </Style>
+  <Style name="polygon style 34">
+    <Rule name="rule 4">
+      <Filter>([scalerank]&lt;3)</Filter>
+      <MinScaleDenominator>12500000</MinScaleDenominator>
+      <MaxScaleDenominator>99999999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+  </Style>
+  <Style name="polygon style 41">
+    <Rule name="rule 5">
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <MaxScaleDenominator>12499999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+  </Style>
+  <Style name="polygon style 48">
+    <Rule name="rule 6">
+      <Filter>([area]&lt;=100000)</Filter>
+      <MaxScaleDenominator>99999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 7">
+      <Filter>(([area]&gt;100000) and ([area]&lt;=200000))</Filter>
+      <MaxScaleDenominator>99999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 8">
+      <Filter>(([area]&gt;200000) and ([area]&lt;=1000000))</Filter>
+      <MaxScaleDenominator>99999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 9">
+      <Filter>(([area]&gt;1000000) and ([area]&lt;=5000000))</Filter>
+      <MaxScaleDenominator>99999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 10">
+      <Filter>(([area]&gt;5000000) and ([area]&lt;=25000000))</Filter>
+      <MaxScaleDenominator>99999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 11">
+      <Filter>([area]&gt;25000000)</Filter>
+      <MaxScaleDenominator>99999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 12">
+      <Filter>(([area]&gt;100000) and ([area]&lt;=200000))</Filter>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <MaxScaleDenominator>199999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 13">
+      <Filter>(([area]&gt;200000) and ([area]&lt;=1000000))</Filter>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <MaxScaleDenominator>199999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 14">
+      <Filter>(([area]&gt;1000000) and ([area]&lt;=5000000))</Filter>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <MaxScaleDenominator>199999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 15">
+      <Filter>(([area]&gt;5000000) and ([area]&lt;=25000000))</Filter>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <MaxScaleDenominator>199999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 16">
+      <Filter>([area]&gt;25000000)</Filter>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <MaxScaleDenominator>199999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 17">
+      <Filter>(([area]&gt;200000) and ([area]&lt;=1000000))</Filter>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <MaxScaleDenominator>399999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 18">
+      <Filter>(([area]&gt;1000000) and ([area]&lt;=5000000))</Filter>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <MaxScaleDenominator>399999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 19">
+      <Filter>(([area]&gt;5000000) and ([area]&lt;=25000000))</Filter>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <MaxScaleDenominator>399999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 20">
+      <Filter>([area]&gt;25000000)</Filter>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <MaxScaleDenominator>399999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 21">
+      <Filter>(([area]&gt;1000000) and ([area]&lt;=5000000))</Filter>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <MaxScaleDenominator>749999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 22">
+      <Filter>(([area]&gt;5000000) and ([area]&lt;=25000000))</Filter>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <MaxScaleDenominator>749999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 23">
+      <Filter>([area]&gt;25000000)</Filter>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <MaxScaleDenominator>749999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 24">
+      <Filter>(([area]&gt;5000000) and ([area]&lt;=25000000))</Filter>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <MaxScaleDenominator>1499999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 25">
+      <Filter>([area]&gt;25000000)</Filter>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <MaxScaleDenominator>1499999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+    <Rule name="rule 26">
+      <Filter>([area]&gt;25000000)</Filter>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <MaxScaleDenominator>2999999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,255)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+  </Style>
+  <Style name="polygon style 8">
+    <Rule name="rule 2">
+      <MaxScaleDenominator>1499999</MaxScaleDenominator>
+      <PolygonSymbolizer>
+        <CssParameter name="fill">rgb(0,0,0)</CssParameter>
+      </PolygonSymbolizer>
+    </Rule>
+  </Style>
+  <Layer name="layer 7" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <StyleName>polygon style 1</StyleName>
+    <Datasource>
+      <Parameter name="dbname">watercolor</Parameter>
+      <Parameter name="estimate_extent">false</Parameter>
+      <Parameter name="host">localhost</Parameter>
+      <Parameter name="port">5432</Parameter>
+      <Parameter name="table">land_10m</Parameter>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="user">watercolor</Parameter>
+    </Datasource>
+  </Layer>
+  <Layer name="layer 14" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <StyleName>polygon style 8</StyleName>
+    <Datasource>
+      <Parameter name="dbname">planet_osm</Parameter>
+      <Parameter name="estimate_extent">false</Parameter>
+      <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+      <Parameter name="host">127.0.0.1</Parameter>
+      <Parameter name="port">5432</Parameter>
+      <Parameter name="table">coastline</Parameter>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="user">osm</Parameter>
+    </Datasource>
+  </Layer>
+  <Layer name="layer 33" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <StyleName>polygon style 27</StyleName>
+    <Datasource>
+      <Parameter name="dbname">watercolor</Parameter>
+      <Parameter name="estimate_extent">False</Parameter>
+      <Parameter name="host">localhost</Parameter>
+      <Parameter name="password">None</Parameter>
+      <Parameter name="port">5432</Parameter>
+      <Parameter name="table">lakes_110m</Parameter>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="user">watercolor</Parameter>
+    </Datasource>
+  </Layer>
+  <Layer name="layer 40" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <StyleName>polygon style 34</StyleName>
+    <Datasource>
+      <Parameter name="dbname">watercolor</Parameter>
+      <Parameter name="estimate_extent">False</Parameter>
+      <Parameter name="host">localhost</Parameter>
+      <Parameter name="password">None</Parameter>
+      <Parameter name="port">5432</Parameter>
+      <Parameter name="table">lakes_50m</Parameter>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="user">watercolor</Parameter>
+    </Datasource>
+  </Layer>
+  <Layer name="layer 47" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <StyleName>polygon style 41</StyleName>
+    <Datasource>
+      <Parameter name="dbname">watercolor</Parameter>
+      <Parameter name="estimate_extent">False</Parameter>
+      <Parameter name="host">localhost</Parameter>
+      <Parameter name="password">None</Parameter>
+      <Parameter name="port">5432</Parameter>
+      <Parameter name="table">lakes_10m</Parameter>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="user">watercolor</Parameter>
+    </Datasource>
+  </Layer>
+  <Layer name="layer 54" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <StyleName>polygon style 48</StyleName>
+    <Datasource>
+      <Parameter name="dbname">planet_osm</Parameter>
+      <Parameter name="estimate_extent">false</Parameter>
+      <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+      <Parameter name="host">127.0.0.1</Parameter>
+      <Parameter name="port">5432</Parameter>
+      <Parameter name="table">
+                (SELECT way,
+                        name,
+                        ST_Area(way) AS area
+                 FROM planet_osm_polygon
+                 WHERE "natural" IN ('water', 'bay')
+                    OR "waterway" IN ('riverbank')
+                 ORDER BY z_order ASC, way_area DESC
+                
+                ) AS water</Parameter>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="user">osm</Parameter>
+    </Datasource>
+  </Layer>
+  <Layer name="layer 61" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <StyleName>line style 58</StyleName>
+    <Datasource>
+      <Parameter name="dbname">watercolor</Parameter>
+      <Parameter name="estimate_extent">False</Parameter>
+      <Parameter name="host">localhost</Parameter>
+      <Parameter name="password">None</Parameter>
+      <Parameter name="port">5432</Parameter>
+      <Parameter name="table">roads_z6_europe</Parameter>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="user">watercolor</Parameter>
+    </Datasource>
+  </Layer>
+  <Layer name="layer 68" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <StyleName>line style 65</StyleName>
+    <Datasource>
+      <Parameter name="dbname">watercolor</Parameter>
+      <Parameter name="estimate_extent">False</Parameter>
+      <Parameter name="host">localhost</Parameter>
+      <Parameter name="password">None</Parameter>
+      <Parameter name="port">5432</Parameter>
+      <Parameter name="table">roads_z6_global</Parameter>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="user">watercolor</Parameter>
+    </Datasource>
+  </Layer>
+  <Layer name="layer 75" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <StyleName>line style 72</StyleName>
+    <Datasource>
+      <Parameter name="dbname">watercolor</Parameter>
+      <Parameter name="estimate_extent">False</Parameter>
+      <Parameter name="host">localhost</Parameter>
+      <Parameter name="password">None</Parameter>
+      <Parameter name="port">5432</Parameter>
+      <Parameter name="table">roads_z6_global_extra</Parameter>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="user">watercolor</Parameter>
+    </Datasource>
+  </Layer>
+  <Layer name="layer 82" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <StyleName>line style 79</StyleName>
+    <Datasource>
+      <Parameter name="dbname">watercolor</Parameter>
+      <Parameter name="estimate_extent">False</Parameter>
+      <Parameter name="host">localhost</Parameter>
+      <Parameter name="password">None</Parameter>
+      <Parameter name="port">5432</Parameter>
+      <Parameter name="table">roads_z6_north_america</Parameter>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="user">watercolor</Parameter>
+    </Datasource>
+  </Layer>
+  <Layer name="layer 161" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <StyleName>polygon style 155</StyleName>
+    <Datasource>
+      <Parameter name="dbname">planet_osm</Parameter>
+      <Parameter name="estimate_extent">false</Parameter>
+      <Parameter name="extent">-20037508,-20037508,20037508,20037508</Parameter>
+      <Parameter name="host">localhost</Parameter>
+      <Parameter name="port">5432</Parameter>
+      <Parameter name="table">(SELECT way, ST_Area(way) AS area FROM planet_osm_polygon WHERE building IS NOT NULL ORDER BY z_order ASC, way_area DESC) AS footprints</Parameter>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="user">osm</Parameter>
+    </Datasource>
+  </Layer>
+  <Layer name="layer 168" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <StyleName>line style 165</StyleName>
+    <Datasource>
+      <Parameter name="dbname">planet_osm</Parameter>
+      <Parameter name="estimate_extent">false</Parameter>
+      <Parameter name="extent">-20037508,-20037508,20037508,20037508</Parameter>
+      <Parameter name="host">localhost</Parameter>
+      <Parameter name="port">5432</Parameter>
+      <Parameter name="table">planet_osm_line_z10</Parameter>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="user">osm</Parameter>
+    </Datasource>
+  </Layer>
+  <Layer name="layer 175" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <StyleName>line style 172</StyleName>
+    <Datasource>
+      <Parameter name="dbname">planet_osm</Parameter>
+      <Parameter name="estimate_extent">false</Parameter>
+      <Parameter name="extent">-20037508,-20037508,20037508,20037508</Parameter>
+      <Parameter name="host">localhost</Parameter>
+      <Parameter name="port">5432</Parameter>
+      <Parameter name="table">planet_osm_line_z11</Parameter>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="user">osm</Parameter>
+    </Datasource>
+  </Layer>
+  <Layer name="layer 182" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <StyleName>line style 179</StyleName>
+    <Datasource>
+      <Parameter name="dbname">planet_osm</Parameter>
+      <Parameter name="estimate_extent">false</Parameter>
+      <Parameter name="extent">-20037508,-20037508,20037508,20037508</Parameter>
+      <Parameter name="host">localhost</Parameter>
+      <Parameter name="port">5432</Parameter>
+      <Parameter name="table">planet_osm_line_z12</Parameter>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="user">osm</Parameter>
+    </Datasource>
+  </Layer>
+  <Layer name="layer 189" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <StyleName>line style 186</StyleName>
+    <Datasource>
+      <Parameter name="dbname">planet_osm</Parameter>
+      <Parameter name="estimate_extent">false</Parameter>
+      <Parameter name="extent">-20037508,-20037508,20037508,20037508</Parameter>
+      <Parameter name="host">localhost</Parameter>
+      <Parameter name="port">5432</Parameter>
+      <Parameter name="table">planet_osm_line_z13</Parameter>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="user">osm</Parameter>
+    </Datasource>
+  </Layer>
+  <Layer name="layer 196" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <StyleName>line style 193</StyleName>
+    <Datasource>
+      <Parameter name="dbname">planet_osm</Parameter>
+      <Parameter name="estimate_extent">false</Parameter>
+      <Parameter name="extent">-20037508,-20037508,20037508,20037508</Parameter>
+      <Parameter name="host">localhost</Parameter>
+      <Parameter name="port">5432</Parameter>
+      <Parameter name="table">planet_osm_line_z14</Parameter>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="user">osm</Parameter>
+    </Datasource>
+  </Layer>
+  <Layer name="layer 203" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
+    <StyleName>line style 200</StyleName>
+    <Datasource>
+      <Parameter name="dbname">planet_osm</Parameter>
+      <Parameter name="estimate_extent">false</Parameter>
+      <Parameter name="extent">-20037508,-20037508,20037508,20037508</Parameter>
+      <Parameter name="host">localhost</Parameter>
+      <Parameter name="port">5432</Parameter>
+      <Parameter name="table">planet_osm_line_z15plus</Parameter>
+      <Parameter name="type">postgis</Parameter>
+      <Parameter name="user">osm</Parameter>
+    </Datasource>
+  </Layer>
+</Map>
