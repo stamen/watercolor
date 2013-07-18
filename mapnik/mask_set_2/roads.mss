@@ -28,7 +28,7 @@ Roads at the mid-zooms
 }
 
 
-.ne_10m_roads_casing[zoom=7]
+.ne_10m_roads_casing[zoom=7][type!="Ferry Route"]
 {
 	line-width: 4;
     line-color: #f00;
@@ -42,7 +42,7 @@ Roads at the mid-zooms
     line-color: #000;
 }
 
-.ne_10m_roads_casing[zoom=8]
+.ne_10m_roads_casing[zoom=8][type!="Ferry Route"]
 {
 	line-width: 4;
 	line-color: #f00;
