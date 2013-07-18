@@ -79,24 +79,14 @@ Software Dependencies (required)
 
 		sudo pip install scipy
 
-
 * The TileStache Python libraries (http://pypi.python.org/pypi/TileStache/)
 
 		sudo pip install tilestache
-
-
-The following are requirements for Toner, which may be similar to the requirements for Watercolor:
---
 
 * The GDAL libraries and utlities (http://www.gdal.org/)
 
 		sudo apt-get install gdal-bin
 		
-* Imposm version 2 (http://www.imposm.org)
-
-		sudo apt-get install build-essential python-dev protobuf-compiler libprotobuf-dev libtokyocabinet-dev python-psycopg2 libgeos-c1
-		sudo pip install imposm
-
 * The gunicorn WSGI web server framework (http://www.gunicorn.org/)
 
 		sudo pip install gunicorn
@@ -107,24 +97,13 @@ Data Dependencies (required)
 * A PostGIS database called 'planet_osm' containing OSM data (loaded by the osm2pgsql script) and
   coastline using the spherical mercator projection (EPSG:900913). See below for
   details.
-
-* A second PostGIS database called 'toner' containing NaturalEarth data loaded by the shp2pgsql script
-  (this is installed with PostGIS), using the spherical mercator projection
-  (EPSG:900913). See below for details. This database also includes tables for City labels and 
-  townspots in EPSG:900913 (included here). Use the included import script (see below).
-  
-  [Yes, in this case the database should be called 'toner' not 'watercolor']
   
 A quick guide to setting up your databases (for PostgreSQL 9.x):
 
 	createuser --no-superuser --no-createdb --no-createrole osm
-	createdb --owner=osm toner 
 	createdb --owner=osm planet_osm 
-	psql -d toner -c "CREATE EXTENSION postgis;"
 	psql -d planet_osm -c "CREATE EXTENSION postgis;"
-	echo "ALTER TABLE spatial_ref_sys OWNER TO osm;" | psql -d toner
 	echo "ALTER TABLE spatial_ref_sys OWNER TO osm;" | psql -d planet_osm
-	echo "ALTER TABLE geometry_columns OWNER TO osm;" | psql -d toner
 	echo "ALTER TABLE geometry_columns OWNER TO osm;" | psql -d planet_osm
 
 
@@ -194,12 +173,12 @@ Data overview
 An overview of data sources, storage locations, download and import methods (in progress)
 
 
-| Data              | Zoom  | Source    | Download method | Input method        | Storage loc |
-| ----------------- | ----- | --------- | --------- | ------------------- | ----------- |
-| Coastline (low z) | 1-7   | NatEarth  | dl script |                     | Zipped shp  |
-| Coastline (high z)| 8-19  | OSM       | wget url  | shp2pgsql           | toner db    |
-| Lakes (TODO)      | ???   | NatEarth  | dl script | n/a                 | Zipped shp  |
-| Roads (low z)     | 6-8   | NatEarth  | dl script | n/a                 | Zipped shp  |
-| Roads (high z)    | 9-19  | OSM       | wget url  | osm2pgsql           | planet db   |
+| Data              | Zoom  | Source    | Download method | Input method        | Storage loc | Mask set |
+| ----------------- | ----- | --------- | --------- | ------------------- | ----------- | --- |
+| Coastline (low z) | 1-7   | NatEarth  | dl script | n/a                 | Zipped shp  | 1,2 |
+| Coastline (high z)| 8-19  | OSM       | wget url  | shp2pgsql           | planet db   | 1,2 |
+| Lakes (TODO)      | ???   | NatEarth  | dl script | n/a                 | Zipped shp  | 2   |
+| Roads (low z)     | 6-8   | NatEarth  | dl script | n/a                 | Zipped shp  | 1,2 |
+| Roads (high z)    | 9-19  | OSM       | wget url  | osm2pgsql           | planet db   | 1,2 |
 
 
