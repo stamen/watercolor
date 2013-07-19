@@ -1,3 +1,53 @@
+This is the place where are the non-database-y things required to generate the
+"Watercolor" Mapnik stylesheets are kept.
+
+At the end of the day Watercolor generates stylesheets that can be used by a program
+called Mapnik to draw maps. Those maps might be a single large image for print
+or a lot of small images for map tiles but as far as Mapnik is concerned there
+is an image of a set size that covers a specific geographic area and a bunch of
+rules (styles) for how to draw the stuff inside those boxes.
+
+Watercolor relies on a tool called Cascadenik so that map styles can be defined using
+a CSS-like syntax that is a little more friendly than the XML-based markup
+language that Mapnik uses by default. With Cascadenik you define two kinds of
+files: Things ending in '.mss' are where the actual look and feel for a map;
+Things ending in '.mml' are where you define administrative bits like database
+passwords and queries for things to show on the map.
+
+Note that Watercolor does some fairly unique things with the Cascadenik/Mapnik/Tilestache toolchain, and is more difficult to understand than a style like Toner that uses Cascadenik and Mapnik in a more straightforward way. Do not try to learn how Cascadenik and Mapnik work by studying Watercolor!
+
+How different is Watercolor? Specifically, Watercolor's mapnik stylesheets create unique "mask styles" (see below for details) which are then processed by the HandMaps python plugin to Tilestache. 
+
+Stylesheets and makefiles
+--
+Watercolor uses a Makefile to control building the Mapnik stylesheets and generating test images. This document will not go into detail about how the `make` command works. Here are the `make` commands you need to know:
+
+NOTE: all `make` commands should be run from the root watercolor directory, not from the watercolor/mapnik subdirectory.
+
+First, run this command:
+
+	make clean
+
+…which will remove any precompiled files and establish a fresh working environment. Then, you should compile the necessary Mapnik stylesheets and update the Tilestache directory with this command: 
+
+	make tilestache-update
+
+Optional: There are also other `make` commands for testing changes to the stylesheet by
+generating images of cities all over the world at different zoom levels. To test
+your Watercolor stylesheet you would type:
+
+	make all
+
+Or simply:
+
+	make
+
+…which will generate images in the watercolor/renders/ directory.
+
+Once you have compiled your Mapnik stylesheets and (optionally) tested them by rendering sample images, you can proceed to the README file in the Tilestache directory to generate map tiles.
+
+
+
 Watercolor masks and mapnik styles
 ====
 
