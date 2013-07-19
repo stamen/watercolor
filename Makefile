@@ -80,6 +80,9 @@ tilestache/tilestache.cfg: mapnik/mask_set_1/style.xml mapnik/mask_set_2/style.x
 	rm -f -r tilestache/cache/watercolor
 	touch tilestache/tilestache.cfg
 
+tilestache-update: \
+  tilestache/tilestache.cfg
+
 tokyo: \
 	renders/low-zoom-world-1.jpg renders/low-zoom-world-2.jpg \
 	renders/low-zoom-world-tokyo-3.jpg renders/low-zoom-world-tokyo-4.jpg \
