@@ -8,6 +8,7 @@ import os
 import numpy
 import tempfile
 from urlparse import urljoin, urlparse
+from itertools import count
 from os.path import realpath
 
 class Provider:
@@ -34,15 +35,8 @@ class Provider:
         filename = realpath(filename)
         
         if filename not in self.opened_images:
-            while True:
-                try:
-                    a = Image.open(filename)
-                    a.load()
-                    self.opened_images[filename] = a
-                    break
-                except:
-                    pass
-
+            self.opened_images[filename] = Image.open(filename)
+        
         return self.opened_images[filename]
     
     def get_texture_offsets(self, texture, xmin, ymax, zoom):
@@ -110,11 +104,14 @@ class Provider:
             ##      prov = Mapnik(self.layer, style_path)
             prov = self.layer.config.layers[layer].provider
 
-            while True:
+            for attempt in count():
                 mapnik_area = prov.renderArea(width, height, srs, xmin, ymin, xmax, ymax, zoom)      
                 mapnik_alpha = mapnik_area.getpixel((0,0))[-1]
                 if mapnik_alpha != 0:
                     break
+                
+                if attempt > 3:
+                    raise Exception('Too many tries to get this right (%d, %d, %d, %d %s)' % (xmin, ymin, xmax, ymax, layer))
 
             # masks is a dictionary of color channel arrays
             masks = get_color_masks(mapnik_area, mapnik_layers[layer])
