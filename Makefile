@@ -65,6 +65,7 @@ IST_LATLON = 41.00527 28.97696
 AMS_LATLON = 52.370215 4.895167
 ADE_LATLON = -34.928726 138.599945
 PAR_LATLON = 48.856614 2.352221
+SUP_LATLON = 48.076 -89.096
 
 all: index.html
 
@@ -94,6 +95,12 @@ tokyo: \
 	renders/tokyo-19.jpg
 	touch index.html
 
+superior: \
+	renders/low-zoom-world-lake-superior-5.jpg \
+	renders/low-zoom-world-lake-superior-6.jpg \
+	renders/low-zoom-world-lake-superior-7.jpg \
+	renders/low-zoom-world-lake-superior-8.jpg \
+	renders/low-zoom-world-lake-superior-9.jpg
 
 index.html: \
 	renders/low-zoom-world-1.jpg renders/low-zoom-world-2.jpg \
@@ -232,6 +239,22 @@ renders/low-zoom-world-tokyo-8.jpg: tilestache/tilestache.cfg
 
 renders/low-zoom-world-tokyo-9.jpg: tilestache/tilestache.cfg
 	tilestache-compose.py -i . -c tilestache/tilestache.cfg -l watercolor -n 35.6595 139.7004 -z 9 -d 1024 600 $@
+
+
+renders/low-zoom-world-lake-superior-5.jpg: tilestache/tilestache.cfg
+	tilestache-compose.py -i . -c tilestache/tilestache.cfg -l watercolor -n $(SUP_LATLON) -z 5 -d 1024 600 $@
+
+renders/low-zoom-world-lake-superior-6.jpg: tilestache/tilestache.cfg
+	tilestache-compose.py -i . -c tilestache/tilestache.cfg -l watercolor -n $(SUP_LATLON) -z 6 -d 1024 600 $@
+
+renders/low-zoom-world-lake-superior-7.jpg: tilestache/tilestache.cfg
+	tilestache-compose.py -i . -c tilestache/tilestache.cfg -l watercolor -n $(SUP_LATLON) -z 7 -d 1024 600 $@
+
+renders/low-zoom-world-lake-superior-8.jpg: tilestache/tilestache.cfg
+	tilestache-compose.py -i . -c tilestache/tilestache.cfg -l watercolor -n $(SUP_LATLON) -z 8 -d 1024 600 $@
+
+renders/low-zoom-world-lake-superior-9.jpg: tilestache/tilestache.cfg
+	tilestache-compose.py -i . -c tilestache/tilestache.cfg -l watercolor -n $(SUP_LATLON) -z 9 -d 1024 600 $@
 
 
 renders/low-zoom-world-oakland-5.jpg: tilestache/tilestache.cfg
