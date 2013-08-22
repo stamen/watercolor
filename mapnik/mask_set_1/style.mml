@@ -5,7 +5,7 @@
 <!DOCTYPE Map[
     <!ENTITY map_srs "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
     <!ENTITY osm_srs "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
-    <!ENTITY host "localhost">
+    <!ENTITY host "127.0.0.1">
     <!ENTITY port "5432">
     <!ENTITY user "osm">
     <!ENTITY password "">
@@ -14,14 +14,24 @@
     <!ENTITY epsg4326 "+proj=longlat +datum=WGS84">
     <!ENTITY epsg900913 "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
     <!ENTITY epsg900913_extent "-20037508,-20037508,20037508,20037508">
+
     <!ENTITY osm_host "localhost">
     <!ENTITY osm_port "5432">
     <!ENTITY osm_name "planet_osm">
     <!ENTITY osm_user "osm">
     <!ENTITY osm_pass "">
 
+    <!ENTITY wc_host "localhost">
+    <!ENTITY wc_port "5432">
+    <!ENTITY wc_name "watercolor">
+    <!ENTITY wc_user "watercolor">
+    <!ENTITY wc_pass "">
+
 ]>
 <Map srs="&map_srs;">
+
+    <DataSourcesConfig src="../datasources.ini" />
+    
     <Stylesheet><![CDATA[
         #areas
         {
@@ -35,7 +45,19 @@
     <Stylesheet src="ground.mss"/>
     <Stylesheet src="roads.mss"/>
 
-    <Layer class="coast" srs="&osm_srs;">
+    <Layer id="land" srs="&epsg900913;">
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="host">&wc_host;</Parameter>
+            <Parameter name="port">&wc_port;</Parameter>
+            <Parameter name="dbname">&wc_name;</Parameter>
+            <Parameter name="user">&wc_user;</Parameter>      
+            <Parameter name="password">&wc_pass;</Parameter>
+            <Parameter name="table">land_10m</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+        </Datasource>
+    </Layer>
+    <Layer id="coast" srs="&epsg900913;">
         <Datasource>
             <Parameter name="type">postgis</Parameter>
             <Parameter name="host">&host;</Parameter>
@@ -137,26 +159,28 @@
     </Layer>
                          
     
-    <!-- ROADS: NATURAL EARTH -->
+    <!-- ZOOM 6 -->
+    <Layer class="ne_10m_z6_roads" id="z6_europe" source_name="roads_z6_europe" />
+    <Layer class="ne_10m_z6_roads" id="z6_global" source_name="roads_z6_global" />
+    <Layer class="ne_10m_z6_roads" id="z6_global_extra" source_name="roads_z6_global_extra" />
+    <Layer class="ne_10m_z6_roads" id="z6_north_america" source_name="roads_z6_north_america" />
     
-    <Layer class="ne_10m_roads_casing" srs="&epsg900913;">
-        <Datasource>
-            <Parameter name="type">shape</Parameter>
-            <Parameter name="file">../shp/ne_10m_roads-merc.zip</Parameter>
-            <Parameter name="estimate_extent">false</Parameter>
-            <Parameter name="extent">&epsg900913_extent;</Parameter>
-        </Datasource>
-    </Layer>
-    <Layer class="ne_10m_roads_inline" srs="&epsg900913;">
-        <Datasource>
-            <Parameter name="type">shape</Parameter>
-            <Parameter name="file">../shp/ne_10m_roads-merc.zip</Parameter>
-            <Parameter name="estimate_extent">false</Parameter>
-            <Parameter name="extent">&epsg900913_extent;</Parameter>
-        </Datasource>
-    </Layer>   
-        
-    <!-- ROADS: OSM -->
+    <!-- ZOOM 7 -->
+    <Layer class="ne_10m_z7_roads_inline" id="z7_europe_inline" source_name="roads_z7_europe" />
+    <Layer class="ne_10m_z7_roads_inline" id="z7_europe_extra_inline" source_name="roads_z7_europe_extra" />
+    <Layer class="ne_10m_z7_roads_inline" id="z7_global_inline" source_name="roads_z7_global" />
+    <Layer class="ne_10m_z7_roads_inline" id="z7_global_extra_inline" source_name="roads_z7_global_extra" />
+    <Layer class="ne_10m_z7_roads_inline" id="z7_north_america_inline" source_name="roads_z7_north_america" />    
+    <Layer class="ne_10m_z7_roads_inline" id="z7_north_america_extra_inline" source_name="roads_z7_north_america_extra" />
+    
+    <!-- ZOOM 8 -->
+    <Layer class="ne_10m_z8_roads_inline" id="z8_europe_inline" source_name="roads_z8_europe" />
+    <Layer class="ne_10m_z8_roads_inline" id="z8_europe_extra_inline" source_name="roads_z8_europe_extra" />
+    <Layer class="ne_10m_z8_roads_inline" id="z8_global_inline" source_name="roads_z8_global" />
+    <Layer class="ne_10m_z8_roads_inline" id="z8_global_extra_inline" source_name="roads_z8_global_extra" />
+    <Layer class="ne_10m_z8_roads_inline" id="z8_north_america_inline" source_name="roads_z8_north_america" />    
+    <Layer class="ne_10m_z8_roads_inline" id="z8_north_america_extra_inline" source_name="roads_z8_north_america_extra" />   
+    
     
     <Layer id="z10-roads" class="roads" srs="&epsg900913;">
         <Datasource>

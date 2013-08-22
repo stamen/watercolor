@@ -14,7 +14,7 @@ Roads at the mid-zooms
 */
 
 /*
-.ne_10m_roads_inline[zoom=5][scalerank=3]
+.ne_10m_z6_roads_inline[zoom=5][scalerank=3]
 {
 	line-width: 1;
     line-color: #f00;
@@ -23,10 +23,10 @@ Roads at the mid-zooms
 
 
 /*
-.ne_10m_roads_inline[zoom=6][scalerank=3],
-.ne_10m_roads_inline[zoom=6][scalerank=4],
-.ne_10m_roads_inline[zoom=6][type="Beltway"],
-.ne_10m_roads_inline[zoom=6][scalerank<=5][expressway=1]
+.ne_10m_z6_roads_inline[zoom=6][scalerank=3],
+.ne_10m_z6_roads_inline[zoom=6][scalerank=4],
+.ne_10m_z6_roads_inline[zoom=6][type="Beltway"],
+.ne_10m_z6_roads_inline[zoom=6][scalerank<=5][expressway=1]
 {
 	line-width: 1;
     line-color: #f00;
@@ -34,20 +34,20 @@ Roads at the mid-zooms
 */
 
 
-.ne_10m_roads_inline[zoom=7][scalerank=3],
-.ne_10m_roads_inline[zoom=7][scalerank=4],
-.ne_10m_roads_inline[zoom=7][type="Beltway"],
-.ne_10m_roads_inline[zoom=7][scalerank<=5][expressway=1]
+.ne_10m_z7_roads_inline[zoom=7][scalerank=3],
+.ne_10m_z7_roads_inline[zoom=7][scalerank=4],
+.ne_10m_z7_roads_inline[zoom=7][type="Beltway"],
+.ne_10m_z7_roads_inline[zoom=7][scalerank<=5][expressway=1]
 {
     line-color: #f00;
 	line-width: 5;
 }
 
 
-.ne_10m_roads_inline[zoom=8][scalerank=3],
-.ne_10m_roads_inline[zoom=8][scalerank=4],
-.ne_10m_roads_inline[zoom=8][type="Beltway"],
-.ne_10m_roads_inline[zoom=8][scalerank<=6][expressway=1]
+.ne_10m_z7_roads_inline[zoom=8][scalerank=3],
+.ne_10m_z7_roads_inline[zoom=8][scalerank=4],
+.ne_10m_z7_roads_inline[zoom=8][type="Beltway"],
+.ne_10m_z7_roads_inline[zoom=8][scalerank<=6][expressway=1]
 {
 	line-color: #f00;
 	line-width: 5;

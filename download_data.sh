@@ -16,6 +16,8 @@ curl -L http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/
 curl -L http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/physical/ne_50m_lakes.zip -o $DIR/ne_50m_lakes.zip
 curl -L http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/physical/ne_110m_lakes.zip -o $DIR/ne_110m_lakes.zip
 
+curl -L http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/physical/ne_10m_land.zip -o $DIR/ne_10m_land.zip
+
 for z in $DIR/*.zip; do unzip $z -d $DIR/; done
 for z in $DIR/*.zip; do rm $z; done
 
