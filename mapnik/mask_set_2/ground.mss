@@ -1,6 +1,6 @@
 Map { map-bgcolor: #00f; }
 
-#coast[zoom>=9], #land[zoom<9] { polygon-fill: #000; }
+#coast[zoom>=8], #land[zoom<8] { polygon-fill: #000; }
 
 .water-bodies[zoom=8][area>25000000],
 .water-bodies[zoom=9][area>5000000],

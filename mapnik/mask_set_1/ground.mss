@@ -2,7 +2,7 @@
 Map { map-bgcolor: #000; }
 
 /* LAND color */
-#coast[zoom>=9], #land[zoom<9] { polygon-fill: #ff0; }
+#coast[zoom>=8], #land[zoom<8] { polygon-fill: #ff0; }
 
 .green-areas[zoom=10][area>5000000],
 .green-areas[zoom=11][area>500000],
