@@ -99,8 +99,6 @@ tokyo: \
 	touch index.html
 
 superior: \
-	renders/low-zoom-world-lake-superior-5.jpg \
-	renders/low-zoom-world-lake-superior-6.jpg \
 	renders/low-zoom-world-lake-superior-7.jpg \
 	renders/low-zoom-world-lake-superior-8.jpg \
 	renders/low-zoom-world-lake-superior-9.jpg
