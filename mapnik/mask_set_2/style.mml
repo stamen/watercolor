@@ -15,18 +15,21 @@
     <!ENTITY user "osm">
     <!ENTITY password "">
     <!ENTITY dbname "planet_osm">      
+    <!ENTITY srid "900913">      
     
     <!ENTITY osm_host "localhost">
     <!ENTITY osm_port "5432">
     <!ENTITY osm_name "planet_osm">
     <!ENTITY osm_user "osm">
     <!ENTITY osm_pass "">
+    <!ENTITY osm_srid "900913">      
 
     <!ENTITY included_data_host "localhost">
     <!ENTITY included_data_port "5432">
     <!ENTITY included_data_name "toner">
     <!ENTITY included_data_user "osm">
     <!ENTITY included_data_pass "">
+    <!ENTITY included_data_srid "900913">      
 
 ]>
 <Map srs="&map_srs;">
@@ -60,6 +63,7 @@
             <Parameter name="user">&user;</Parameter>
             <Parameter name="password">&password;</Parameter>
             <Parameter name="dbname">&dbname;</Parameter>
+            <Parameter name="srid">&srid;</Parameter>
             <Parameter name="estimate_extent">false</Parameter>
             <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
 
@@ -84,6 +88,7 @@
             <Parameter name="user">&user;</Parameter>
             <Parameter name="password">&password;</Parameter>
             <Parameter name="dbname">&dbname;</Parameter>
+            <Parameter name="srid">&srid;</Parameter>
             <Parameter name="estimate_extent">false</Parameter>
             <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
 
@@ -143,6 +148,7 @@
             <Parameter name="user">&user;</Parameter>
             <Parameter name="password">&password;</Parameter>
             <Parameter name="dbname">&dbname;</Parameter>
+            <Parameter name="srid">&srid;</Parameter>
             <Parameter name="estimate_extent">false</Parameter>
             <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
 
@@ -190,6 +196,7 @@
             <Parameter name="dbname">&osm_name;</Parameter>
             <Parameter name="estimate_extent">false</Parameter>
             <Parameter name="extent">&epsg900913_extent;</Parameter>
+            <Parameter name="srid">&osm_srid;</Parameter>
             <Parameter name="table">(SELECT way, ST_Area(way) AS area FROM planet_osm_polygon WHERE building IS NOT NULL ORDER BY z_order ASC, way_area DESC) AS footprints</Parameter>
         </Datasource>
     </Layer>     
@@ -204,6 +211,7 @@
             <Parameter name="dbname">&osm_name;</Parameter>
             <Parameter name="estimate_extent">false</Parameter>
             <Parameter name="extent">&epsg900913_extent;</Parameter>
+            <Parameter name="srid">&osm_srid;</Parameter>
             <Parameter name="table">planet_osm_line_z10</Parameter>
         </Datasource>
     </Layer>  
@@ -218,6 +226,7 @@
             <Parameter name="dbname">&osm_name;</Parameter>
             <Parameter name="estimate_extent">false</Parameter>
             <Parameter name="extent">&epsg900913_extent;</Parameter>
+            <Parameter name="srid">&osm_srid;</Parameter>
             <Parameter name="table">planet_osm_line_z11</Parameter>
         </Datasource>
     </Layer>
@@ -232,6 +241,7 @@
             <Parameter name="dbname">&osm_name;</Parameter>
             <Parameter name="estimate_extent">false</Parameter>
             <Parameter name="extent">&epsg900913_extent;</Parameter>
+            <Parameter name="srid">&osm_srid;</Parameter>
             <Parameter name="table">planet_osm_line_z12</Parameter>
         </Datasource>
     </Layer>  
@@ -246,6 +256,7 @@
             <Parameter name="dbname">&osm_name;</Parameter>
             <Parameter name="estimate_extent">false</Parameter>
             <Parameter name="extent">&epsg900913_extent;</Parameter>
+            <Parameter name="srid">&osm_srid;</Parameter>
             <Parameter name="table">planet_osm_line_z13</Parameter>
         </Datasource>
     </Layer> 
@@ -260,6 +271,7 @@
             <Parameter name="dbname">&osm_name;</Parameter>
             <Parameter name="estimate_extent">false</Parameter>
             <Parameter name="extent">&epsg900913_extent;</Parameter>
+            <Parameter name="srid">&osm_srid;</Parameter>
             <Parameter name="table">planet_osm_line_z14</Parameter>
         </Datasource>
     </Layer>
@@ -274,6 +286,7 @@
             <Parameter name="dbname">&osm_name;</Parameter>
             <Parameter name="estimate_extent">false</Parameter>
             <Parameter name="extent">&epsg900913_extent;</Parameter>
+            <Parameter name="srid">&osm_srid;</Parameter>
             <Parameter name="table">planet_osm_line_z15plus</Parameter>
         </Datasource>
     </Layer>
