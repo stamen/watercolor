@@ -1,0 +1,8 @@
+.env
+.thumb.png
+info.txt
+*.mml
+*.xml
+shp/land-polygons-complete-3857/
+shp/natural_earth/
+node_modules
