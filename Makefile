@@ -69,15 +69,7 @@ SUP_LATLON = 48.076 -89.096
 
 all: index.html
 
-mapnik/mask_set_1/style.xml: mapnik/mask_set_1/style.mml
-	cascadenik-compile.py mapnik/mask_set_1/style.mml $@
-	chmod a+r $@
-
-mapnik/mask_set_2/style.xml: mapnik/mask_set_2/style.mml
-	cascadenik-compile.py mapnik/mask_set_2/style.mml $@
-	chmod a+r $@
-
-tilestache/tilestache.cfg: mapnik/mask_set_1/style.xml mapnik/mask_set_2/style.xml
+tilestache/tilestache.cfg:
 	rm -f -r tilestache/cache/watercolor
 	touch tilestache/tilestache.cfg
 
