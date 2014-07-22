@@ -18,6 +18,9 @@ parser.add_option('-e', '--extent', dest='extent', nargs=4,
 parser.add_option('-z', '--zoom', dest='zoom',
                   help='Zoom level. Default %(zoom)d.' % defaults, type='int',
                   action='store')
+parser.add_option('-l', '--laeyer', dest='layer',
+                  help='the tilestache layer.', type='string',
+                  action='store')
 parser.add_option('-d', '--dimensions', dest='dimensions', nargs=2,
                   help='Pixel width, height of output image. Default %d, %d.' % defaults['dimensions'], type='int',
                   action='store')
@@ -32,8 +35,9 @@ if __name__ == '__main__':
 
     config = TileStache.parseConfigfile(options.config)
 
-    provider = config.layers['watercolor'].provider
-    proj = config.layers['watercolor'].projection
+    layer = options.layer
+    provider = config.layers[layer].provider
+    proj = config.layers[layer].projection
     srs = proj.srs
 
     extent = options.extent

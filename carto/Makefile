@@ -48,3 +48,8 @@ mask2.mml: mask2.yml .env
 mask2.xml: mask2.mml
 	carto -l $< > $@
 
+labels.mml: labels.yml .env
+	cat $< | (set -a && source .env && interp) > $@
+
+labels.xml: labels.mml
+	carto -l $< > $@
