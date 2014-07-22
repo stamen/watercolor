@@ -12,28 +12,15 @@ parser.set_defaults(**defaults)
 
 parser.add_option('-c', '--config', dest='config',
                   help='Path to configuration file.')
-
-parser.add_option('-l', '--layer', dest='layer',
-                  help='Layer name from configuration.')
-
 parser.add_option('-e', '--extent', dest='extent', nargs=4,
                   help='Geographic extent of map. Two lat, lon pairs', type='float',
                   action='store')
-
 parser.add_option('-z', '--zoom', dest='zoom',
                   help='Zoom level. Default %(zoom)d.' % defaults, type='int',
                   action='store')
-
 parser.add_option('-d', '--dimensions', dest='dimensions', nargs=2,
                   help='Pixel width, height of output image. Default %d, %d.' % defaults['dimensions'], type='int',
                   action='store')
-
-parser.add_option('-v', '--verbose', dest='verbose',
-                  help='Make a bunch of noise.',
-                  action='store_true')
-
-parser.add_option('-x', '--ignore-cached', action='store_true', dest='ignore_cached',
-                  help='Re-render every tile, whether it is in the cache already or not.')
 
 if __name__ == '__main__':
 
