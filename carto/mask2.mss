@@ -69,7 +69,10 @@ Map {
   }
 }
 
-#roads {
+#tunnels,
+#roads,
+#bridges,
+{
   [zoom=9] {
     [kind='highway'] {
       line-width: 7;
