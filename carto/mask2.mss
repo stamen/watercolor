@@ -84,4 +84,116 @@ Map {
 	  line-color: #f0f; 
     }
   }
+
+  [zoom=10] {
+    [kind='highway'] {
+      line-width: 5;
+	  line-color: #000; 
+    }
+    
+    [kind='major_road'] {
+      line-width: 4;
+	  line-color: #000; 
+    }
+  }
+
+  [zoom=11] {
+    [kind='highway'] {
+      line-width: 5.5;
+	  line-color: #000; 
+    }
+    
+    [kind='major_road'] {
+      line-width: 4.0;
+	  line-color: #000; 
+    }
+  }
+
+  [zoom=12] {
+    [kind='highway'] {
+      line-width: 6.25;
+	  line-color: #000; 
+    }
+    
+    [kind='major_road'] {
+      line-width: 4.00;
+	  line-color: #000; 
+    }
+  }
+
+  [zoom=13] {
+    [kind='highway'] {
+      line-width: 7.5;
+	  line-color: #000; 
+    }
+    
+    [kind='major_road'] {
+      line-width: 4.0;
+	  line-color: #000; 
+    }
+  }
+
+  [zoom=14] {
+    [kind='highway'] {
+      line-width: 8;
+	  line-color: #000; 
+    }
+    
+    [kind='major_road'] {
+      line-width: 5;
+	  line-color: #000; 
+    }
+  }
+
+  [zoom=15] {
+    [kind='highway'] {
+      line-width: 8.0;
+	  line-color: #000; 
+    }
+    
+    [kind='major_road'] {
+      line-width: 5.5;
+	  line-color: #000; 
+    }
+
+    [kind='minor_road'] {
+      line-width: 3.0;
+	  line-color: #000; 
+    }
+  }
+
+  [zoom=16] {
+    [kind='highway'] {
+      line-width: 9.0;
+	  line-color: #000; 
+    }
+    
+    [kind='major_road'] {
+      line-width: 7.0;
+	  line-color: #000; 
+    }
+
+    [kind='minor_road'] {
+      line-width: 4.0;
+	  line-color: #000; 
+    }
+  }
+
+  [zoom=17] {
+    [kind='highway'] {
+      line-width: 15.0;
+	    line-color: #000; 
+    }
+    
+    [kind='major_road'] {
+      line-width: 13.0;
+	  line-color: #000; 
+    }
+
+    [kind='minor_road'] {
+      line-width: 7.0;
+	  line-color: #000; 
+    }
+  }
 }
+
