@@ -12,15 +12,16 @@ install:
 clean:
 	rm -f *.mml *.xml
 
-mask1: mask1.mml
-	# delete project.mml to signal TM1 that it's changed
-	rm -f project.mml
-	ln -s $@.mml project.mml
+xml: mask1.xml mask2.xml terrain-labels.xml
 
-mask2: mask2.mml
-	# delete project.mml to signal TM1 that it's changed
-	rm -f project.mml
-	ln -s $@.mml project.mml
+%: %.mml
+	cp $< project.mml
+
+land: data/osmdata/land-polygons-complete-3857.zip data/osm/data/simplified-land-polygons-complete-3857.zip
+	unzip -o data/land-polygons-complete-3857.zip -d shp/
+	shapeindex shp/land-polygons-complete-3857/land_polygons.shp
+	unzip -o data/simplified-land-polygons-complete-3857.zip -d shp/
+	shapeindex shp/simplified-land-polygons-complete-3857/simplified_land_polygons.shp
 
 data/land-polygons-complete-3857.zip:
 	mkdir -p data
@@ -30,26 +31,12 @@ data/simplified-land-polygons-complete-3857.zip:
 	mkdir -p data
 	curl -sL http://data.openstreetmapdata.com/simplified-land-polygons-complete-3857.zip -o $@
 
-land: data/land-polygons-complete-3857.zip data/simplified-land-polygons-complete-3857.zip
-	cd shp/ && unzip -o ../data/land-polygons-complete-3857.zip
-	cd shp/ && shapeindex land-polygons-complete-3857/land_polygons.shp
-	cd shp/ && unzip -o ../data/simplified-land-polygons-complete-3857.zip
-	cd shp/ && shapeindex simplified-land-polygons-complete-3857/simplified_land_polygons.shp
-
-mask1.mml: mask1.yml .env
+%.mml: %.yml .env
 	cat $< | (set -a && source .env && interp) > $@
 
-mask1.xml: mask1.mml
+%.xml: %.mml
 	carto -l $< > $@
 
-mask2.mml: mask2.yml .env
-	cat $< | (set -a && source .env && interp) > $@
-
-mask2.xml: mask2.mml
-	carto -l $< > $@
-
-labels.mml: labels.yml .env
-	cat $< | (set -a && source .env && interp) > $@
-
-labels.xml: labels.mml
-	carto -l $< > $@
+data/osmdata/%:
+	mkdir -p data/osmdata
+	curl -sL http://data.openstreetmapdata.com/$(@:data/osmdata/%=%) -o $@
