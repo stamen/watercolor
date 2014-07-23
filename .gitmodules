@@ -1,0 +1,3 @@
+[submodule "mapisart"]
+	path = mapisart
+	url = git@github.com:stamen/mapisart.git
