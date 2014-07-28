@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import ModestMaps
 import TileStache
 from PIL import Image
@@ -18,8 +20,11 @@ parser.add_option('-e', '--extent', dest='extent', nargs=4,
 parser.add_option('-z', '--zoom', dest='zoom',
                   help='Zoom level. Default %(zoom)d.' % defaults, type='int',
                   action='store')
-parser.add_option('-l', '--laeyer', dest='layer',
+parser.add_option('-l', '--layer', dest='layer',
                   help='the tilestache layer.', type='string',
+                  action='store')
+parser.add_option('-n', '--center', dest='center', nargs=2,
+                  help='the center.', type='float',
                   action='store')
 parser.add_option('-d', '--dimensions', dest='dimensions', nargs=2,
                   help='Pixel width, height of output image. Default %d, %d.' % defaults['dimensions'], type='int',
@@ -40,14 +45,40 @@ if __name__ == '__main__':
     proj = config.layers[layer].projection
     srs = proj.srs
 
-    extent = options.extent
-    bl = proj.locationProj(ModestMaps.Geo.Location(extent[0],extent[1]))
-    ur = proj.locationProj(ModestMaps.Geo.Location(extent[2],extent[3]))
-    xmin, ymin = bl.x, bl.y
-    xmax, ymax = ur.x, ur.y
+    if options.extent:
+      extent = options.extent
+      bl = proj.locationProj(ModestMaps.Geo.Location(extent[0],extent[1]))
+      ur = proj.locationProj(ModestMaps.Geo.Location(extent[2],extent[3]))
+      xmin, ymin = bl.x, bl.y
+      xmax, ymax = ur.x, ur.y
 
-    print 'starting', args[0]
-    im = provider.renderArea(width, height, srs, xmin, ymin, xmax, ymax, zoom)
-    print 'render finished'
-    im.save(args[0])
+      print 'starting', args[0]
+      im = provider.renderArea(width, height, srs, xmin, ymin, xmax, ymax, zoom)
+      print 'render finished'
+      im.save(args[0])
 
+    else:
+      centerloc = ModestMaps.Geo.Location(options.center[0], options.center[1])
+      center = proj.locationCoordinate(centerloc)
+      center = center.zoomTo(zoom)
+
+      column_offset = width / 2 / tiledim
+      row_offset = height / 2 / tiledim
+
+      ul = ModestMaps.Geo.Coordinate(center.row - row_offset,
+                                     center.column - column_offset,
+                                     zoom)
+      br = ModestMaps.Geo.Coordinate(center.row + row_offset,
+                                     center.column + column_offset,
+                                     zoom)
+
+      ulpoint = proj.coordinateProj(ul)
+      brpoint = proj.coordinateProj(br)
+
+      xmin, ymin = ulpoint.x, ulpoint.y
+      xmax, ymax = brpoint.x, brpoint.y
+
+      print 'starting', args[0]
+      im = provider.renderArea(width, height, srs, xmin, ymin, xmax, ymax, zoom)
+      print 'render finished'
+      im.save(args[0])

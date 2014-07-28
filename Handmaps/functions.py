@@ -4,9 +4,9 @@ from scipy.ndimage.filters import convolve1d
 
 def get_color_masks(image, colors):
     """ Accepts a PIL image and list of colors, returns a dictionary of channels.
-    
+
         Colors is a list of strings like ["0xff9900", "0x990099", ...].
-        
+
         Response is a dictionary of colors to numpy uint8 channel arrays.
     """
     mask_dict = {}
@@ -16,7 +16,7 @@ def get_color_masks(image, colors):
     for color in colors:
 
         fuzziness = 100
-        
+
         truth_arrays = []
 
         for i in range(3):
@@ -27,13 +27,13 @@ def get_color_masks(image, colors):
             else:
                 t = channel_array[i] < (target + fuzziness)
 
-            ##            print hex(color), i, target, target 
+            ##            print hex(color), i, target, target
             truth_arrays.append(t)
 
         mask = truth_arrays[0] & truth_arrays[1] & truth_arrays[2]
 
         mask_dict[color] = mask * 0xff
-        
+
     return  mask_dict
 
 def gaussian(data, radius):
@@ -53,7 +53,7 @@ def gaussian(data, radius):
     kernel = [(d ** 2) / (2 * (radius * .5) ** 2) for d in kernel]
     kernel = [e ** -d for d in kernel]
     kernel = array(kernel, dtype=float) / sum(kernel)
-    
+
     #
     # Convolve on each axis sequentially.
     #
@@ -63,7 +63,7 @@ def gaussian(data, radius):
 def usm(data, multiplier, radius, threshold):
     blur = 255 - copy(data) * .5
     gaussian(blur, radius)
-    
+
     mask = add(data, blur) * .5
 
     mult_mask = (mask - 128) * 4 + 128
@@ -73,7 +73,7 @@ def usm(data, multiplier, radius, threshold):
 
 def blend_channels_linear_light(bottom_chan, top_chan):
     """ Return combination of bottom and top channels.
-    
+
         Math from http://illusions.hu/effectwiki/doku.php?id=linear_light_blending
     """
     return clip(bottom_chan[:,:] + 2 * top_chan[:,:] - 255, 0, 255)
@@ -103,7 +103,7 @@ def get_shadows(image, radius, multiplier=1):
     dat = img2arr(alpha)
     gaussian(dat, radius)
     maskblur = arr2img(dat)
-    
+
     outline = ImageChops.add(maskblur, ImageOps.invert(alpha))
     outline = outline.point(lambda i: 255 - (255 - i) * multiplier)
 
@@ -114,11 +114,11 @@ def get_shadows(image, radius, multiplier=1):
 
 def get_outlines(image, radius, multiplier=1):
     alpha = image.convert("L")
-    
+
     dat = img2arr(ImageChops.invert(alpha))
     gaussian(dat, radius)
     maskblur = arr2img(dat)
-    
+
     outline = ImageChops.add(alpha, maskblur)
     outline = outline.point(lambda i: 255 - (255 - i) * multiplier)
 
@@ -129,11 +129,11 @@ def get_outlines(image, radius, multiplier=1):
 
 def get_outlines_even(image, radius, multiplier=1):
     alpha = image.convert("L")
-    
+
     dat = img2arr(alpha)
     gaussian(dat, radius)
     maskblur = arr2img(dat)
-    
+
     outline = ImageChops.add(alpha, ImageOps.invert(maskblur))
 
     maskblur = maskblur.convert("RGBA")
@@ -142,13 +142,13 @@ def get_outlines_even(image, radius, multiplier=1):
     white = Image.new("RGBA", maskblur.size, "#FFF")
     white.paste(maskblur, None, maskblur)
     final = white.point(lambda i: 255 - (255 - i) * multiplier)
-    
+
     return final
 
 def simplemask(artwork, display_texture, buffer_size):
     mask = ImageChops.invert(artwork.convert("L"))
 
-    tex_layer = Image.new("RGBA", artwork.size)       
+    tex_layer = Image.new("RGBA", artwork.size)
     for i in range(-1, (tex_layer.size[1] - buffer_size) / display_texture.size[1] + 1):
         for j in range(-1, (tex_layer.size[0] - buffer_size) / display_texture.size[1] + 1):
             tex_layer.paste(display_texture, (display_texture.size[0] * j, display_texture.size[1] * i))
@@ -157,25 +157,23 @@ def simplemask(artwork, display_texture, buffer_size):
 
     comp = Image.merge("RGBA", (layers[0], layers[1], layers[2], mask))
 
-##    comp = Image.merge("RGBA", (mask, mask, mask, mask))
+    return comp
 
-    return comp 
-
-def watercolorize(mask, edge_texture, display_texture, texture_offsets, buffer_size, edge_multiplier=.2, edge_gauss=6, edge_threshold=90, outline_gauss=15, outline_multiplier=.7, aa_mult=2):
+def watercolorize(mask, edge_texture, edger_offsets, display_texture, texture_offsets, buffer_size, edge_multiplier=.2, edge_gauss=6, edge_threshold=90, outline_gauss=15, outline_multiplier=.7, aa_mult=2):
 ##    print "using the right watercolorize:", buffer_size, edge_multiplier, edge_gauss, edge_threshold, outline_gauss, outline_multiplier, aa_mult
 ##    edge_texture = edge_texture.point(lambda k:int(k * edge_multiplier))
 
     ## tile the edger and texture as necessary to fit the mask
     edger_layer = Image.new("L", mask.size)
     for i in range(-1, (edger_layer.size[1] - buffer_size) / edge_texture.size[1] + 1):
-        for j in range(-1, (edger_layer.size[0] - buffer_size) / edge_texture.size[1] + 1):
+        for j in range(-1, (edger_layer.size[0] - buffer_size) / edge_texture.size[0] + 1):
             edger_layer.paste(edge_texture,
-                              (edge_texture.size[0] * j - texture_offsets[0] - buffer_size,
-                               edge_texture.size[1] * i - texture_offsets[1] - buffer_size))
+                              (edge_texture.size[0] * j - edger_offsets[0] - buffer_size,
+                               edge_texture.size[1] * i - edger_offsets[1] - buffer_size))
 
-    tex_layer = Image.new("RGBA", mask.size)       
+    tex_layer = Image.new("RGBA", mask.size)
     for i in range(-1, (tex_layer.size[1] - buffer_size) / display_texture.size[1] + 1):
-        for j in range(-1, (tex_layer.size[0] - buffer_size) / display_texture.size[1] + 1):
+        for j in range(-1, (tex_layer.size[0] - buffer_size) / display_texture.size[0] + 1):
             tex_layer.paste(display_texture,
                             (display_texture.size[0] * j - texture_offsets[0] - buffer_size,
                              display_texture.size[1] * i - texture_offsets[1] - buffer_size))
@@ -194,7 +192,7 @@ def watercolorize(mask, edge_texture, display_texture, texture_offsets, buffer_s
     new_outline = arr2img(255 - dat)
 
     if outline_multiplier > 0:
-        
+
 
         outlined = get_outlines_even(ImageOps.invert(new_outline), outline_gauss, outline_multiplier)
 
@@ -210,15 +208,10 @@ def watercolorize(mask, edge_texture, display_texture, texture_offsets, buffer_s
 
     else:
         outlined = tex_layer
-    
+
     alpha_test = outlined.convert("RGBA")
     alpha_test.putalpha(new_outline)
     return alpha_test
-
-##    final_image = Image.new("RGB", mask.size, "#FFFFFF")
-##    final_image.paste(outlined, (0,0), new_outline)
-##
-##    return final_image
 
 def generate_test_block(noise, layer):
     t = Image.open("textures/watercolor_" + layer + "1.png")
@@ -230,7 +223,6 @@ def generate_test_block(noise, layer):
         e = edger.point(lambda k: int(k * mult))
         for j in range(10):
             f = watercolorize(a, e, t, j * 2, thresh)
-    ##        f.save("ground_test_" + str((i + 1) * 10) + "_" + str(j * 25) + ".png")
             c.paste(f, (f.size[0] * i + i, f.size[1] * j + j), f)
 
     return c

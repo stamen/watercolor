@@ -129,36 +129,40 @@ index.html: \
 	renders/tokyo-19.jpg renders/16th-mission-19.jpg
 	touch index.html
 
+mission: renders/16th-mission-10.jpg renders/16th-mission-11.jpg renders/16th-mission-12.jpg renders/16th-mission-13.jpg \
+  renders/16th-mission-14.jpg renders/16th-mission-15.jpg renders/16th-mission-16.jpg renders/16th-mission-17.jpg \
+  renders/16th-mission-18.jpg renders/16th-mission-19.jpg
+	echo "done"
 
 renders/16th-mission-10.jpg: tilestache/tilestache.cfg
-	tilestache-compose.py -i . -c tilestache/tilestache.cfg -l watercolor -n $(16TH_MISSION) -z 10 -d 1024 512 $@
+	python mapisart-compose.py -c tilestache/tilestache.cfg -l watercolor -n $(16TH_MISSION) -z 10 -d 2000 2000 $@
 
 renders/16th-mission-11.jpg: tilestache/tilestache.cfg
-	tilestache-compose.py -i . -c tilestache/tilestache.cfg -l watercolor -n $(16TH_MISSION) -z 11 -d 1024 512 $@
+	python mapisart-compose.py -c tilestache/tilestache.cfg -l watercolor -n $(16TH_MISSION) -z 11 -d 2000 2000 $@
 
 renders/16th-mission-12.jpg: tilestache/tilestache.cfg
-	tilestache-compose.py -i . -c tilestache/tilestache.cfg -l watercolor -n $(16TH_MISSION) -z 12 -d 1024 512 $@
+	python mapisart-compose.py -c tilestache/tilestache.cfg -l watercolor -n $(16TH_MISSION) -z 12 -d 2000 2000 $@
 
 renders/16th-mission-13.jpg: tilestache/tilestache.cfg
-	tilestache-compose.py -i . -c tilestache/tilestache.cfg -l watercolor -n $(16TH_MISSION) -z 13 -d 1024 512 $@
+	python mapisart-compose.py -c tilestache/tilestache.cfg -l watercolor -n $(16TH_MISSION) -z 13 -d 2000 2000 $@
 
 renders/16th-mission-14.jpg: tilestache/tilestache.cfg
-	tilestache-compose.py -i . -c tilestache/tilestache.cfg -l watercolor -n $(16TH_MISSION) -z 14 -d 1024 512 $@
+	python mapisart-compose.py -c tilestache/tilestache.cfg -l watercolor -n $(16TH_MISSION) -z 14 -d 2000 2000 $@
 
 renders/16th-mission-15.jpg: tilestache/tilestache.cfg
-	tilestache-compose.py -i . -c tilestache/tilestache.cfg -l watercolor -n $(16TH_MISSION) -z 15 -d 1024 512 $@
+	python mapisart-compose.py -c tilestache/tilestache.cfg -l watercolor -n $(16TH_MISSION) -z 15 -d 2000 2000 $@
 
 renders/16th-mission-16.jpg: tilestache/tilestache.cfg
-	tilestache-compose.py -i . -c tilestache/tilestache.cfg -l watercolor -n $(16TH_MISSION) -z 16 -d 1024 512 $@
+	python mapisart-compose.py -c tilestache/tilestache.cfg -l watercolor -n $(16TH_MISSION) -z 16 -d 2000 2000 $@
 
 renders/16th-mission-17.jpg: tilestache/tilestache.cfg
-	tilestache-compose.py -i . -c tilestache/tilestache.cfg -l watercolor -n $(16TH_MISSION) -z 17 -d 1024 512 $@
+	python mapisart-compose.py -c tilestache/tilestache.cfg -l watercolor -n $(16TH_MISSION) -z 17 -d 2000 2000 $@
 
 renders/16th-mission-18.jpg: tilestache/tilestache.cfg
-	tilestache-compose.py -i . -c tilestache/tilestache.cfg -l watercolor -n $(16TH_MISSION) -z 18 -d 1024 512 $@
+	python mapisart-compose.py -c tilestache/tilestache.cfg -l watercolor -n $(16TH_MISSION) -z 18 -d 2000 2000 $@
 
 renders/16th-mission-19.jpg: tilestache/tilestache.cfg
-	tilestache-compose.py -i . -c tilestache/tilestache.cfg -l watercolor -n $(16TH_MISSION) -z 19 -d 1024 512 $@
+	python mapisart-compose.py -c tilestache/tilestache.cfg -l watercolor -n $(16TH_MISSION) -z 19 -d 2000 2000 $@
 
 
 renders/low-zoom-world-1.jpg: tilestache/tilestache.cfg
