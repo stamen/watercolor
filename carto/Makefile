@@ -17,19 +17,11 @@ xml: mask1.xml mask2.xml terrain-labels.xml
 %: %.mml
 	cp $< project.mml
 
-land: data/osmdata/land-polygons-complete-3857.zip data/osm/data/simplified-land-polygons-complete-3857.zip
-	unzip -o data/land-polygons-complete-3857.zip -d shp/
+land: data/osmdata/land-polygons-complete-3857.zip data/osmdata/simplified-land-polygons-complete-3857.zip
+	unzip -o data/osmdata/land-polygons-complete-3857.zip -d shp/
 	shapeindex shp/land-polygons-complete-3857/land_polygons.shp
-	unzip -o data/simplified-land-polygons-complete-3857.zip -d shp/
+	unzip -o data/osmdata/simplified-land-polygons-complete-3857.zip -d shp/
 	shapeindex shp/simplified-land-polygons-complete-3857/simplified_land_polygons.shp
-
-data/land-polygons-complete-3857.zip:
-	mkdir -p data
-	curl -sL http://data.openstreetmapdata.com/land-polygons-complete-3857.zip -o $@
-
-data/simplified-land-polygons-complete-3857.zip:
-	mkdir -p data
-	curl -sL http://data.openstreetmapdata.com/simplified-land-polygons-complete-3857.zip -o $@
 
 %.mml: %.yml .env
 	cat $< | (set -a && source .env && interp) > $@
