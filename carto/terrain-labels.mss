@@ -9,15 +9,15 @@
 @text_font_city_bold: 'PT Sans Narrow Bold','Arial Unicode MS Bold';
 @text_font_poi_bold: 'PT Sans Bold Italic','Arial Unicode MS Bold Italic';
 
-@label_color_transport: #000;
+@label_color_transport: #524c4c;
 @label_color_transport_halo: #fff;
-@label_color_physical: #000;
+@label_color_physical: #524c4c;
 @label_color_physical_halo: #fff;
-@label_color_administrative: #000;
+@label_color_administrative: #524c4c;
 @label_color_administrative_halo: #fff;
-@label_color_city: #000;
+@label_color_city: #524c4c;
 @label_color_city_halo: #fff;
-@label_color_poi: #000;
+@label_color_poi: #524c4c;
 @label_color_poi_halo: #fff;
 
 @text_font_size_xxsm: 10;
