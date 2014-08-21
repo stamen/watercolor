@@ -1,33 +1,10 @@
-@text_font_transport: 'PT Sans Narrow Regular','Arial Unicode MS Regular';
-@text_font_transport_bold: 'PT Sans Narrow Bold','Arial Unicode MS Bold';
-@text_font_physical_bold: 'PT Sans Narrow Bold','Arial Unicode MS Bold';
-@text_font_administrative: 'PT Sans Narrow Regular','Arial Unicode MS Regular';
-@text_font_administrative_bold: 'PT Sans Narrow Bold','Arial Unicode MS Bold';
-@text_font_water: 'PT Sans Italic','Arial Unicode MS Italic';
-@text_font_water_bold: 'PT Sans Bold Italic','Arial Unicode MS Bold Italic';
-@text_font_city: 'PT Sans Narrow Regular','Arial Unicode MS Regular';
-@text_font_city_bold: 'PT Sans Narrow Bold','Arial Unicode MS Bold';
-@text_font_poi_bold: 'PT Sans Bold Italic','Arial Unicode MS Bold Italic';
+@text_font_transport: 'Caslon Antique Regular';
+@text_font_administrative: 'Caslon Antique Regular';
+@text_font_city: 'Caslon Antique Regular';
 
 @label_color_transport: #524c4c;
-@label_color_transport_halo: #fff;
-@label_color_physical: #524c4c;
-@label_color_physical_halo: #fff;
-@label_color_administrative: #524c4c;
-@label_color_administrative_halo: #fff;
-@label_color_city: #524c4c;
-@label_color_city_halo: #fff;
-@label_color_poi: #524c4c;
-@label_color_poi_halo: #fff;
-
-@text_font_size_xxsm: 10;
-@text_font_size_xsm: 12;
-@text_font_size_sm: 13;
-@text_font_size_medium: 14;
-@text_font_size_medium_plus: 16;
-@text_font_size_large: 18;
-@text_font_halo_radius_sm: 1;
-@text_font_halo_radius_large: 2;
+@label_color_administrative: #2e2115;
+@label_color_city: #2e2115;
 
 Map {
   font-directory: url("fonts/");
@@ -43,72 +20,9 @@ Map {
   text-placement: line;
   text-max-char-angle-delta: 20;
   text-fill: #444;
-  text-halo-radius: 2;
-  text-halo-fill: #f7f7e6;
   text-spacing: 256;
   text-avoid-edges: true;
 }
-
-#poi_station_labels {
-  [zoom>=16][railway='station'] {
-    shield-name: "[label]";
-    shield-face-name: @text_font_transport_bold;
-    shield-fill: white;
-    shield-size: 12;
-    shield-file: url('images/subway_shield_small.svg');
-  }
-}
-
-/*
-#water-bodies-labels-low,
-#water-bodies-labels-med,
-#water-bodies-labels-high {
-  [zoom=9][area>100000000],
-  [zoom=10][area>100000000],
-  [zoom=11][area>25000000],
-  [zoom=12][area>5000000],
-  [zoom=13][area>2000000],
-  [zoom=14][area>200000],
-  [zoom=15][area>50000],
-  [zoom=16][area>10000],
-  [zoom>=17] {
- 	text-name: "[name]";
-	text-face-name: @text_font_water_bold;
-    text-placement: interior;
-    text-max-char-angle-delta: 30;
-    text-wrap-width: 40;
-    text-halo-radius: 1;
-    text-fill: @label_color_physical_halo;
-    text-halo-fill: @label_color_physical;
-    text-size: @text_font_size_xsm;
-    
-    [zoom>9][zoom<12] {
-      text-spacing: 200;
-      text-wrap-width: 50;
-    }
-    [zoom=12] {
-      text-size: @text_font_size_xsm;
-      text-spacing: 200;
-      text-wrap-width: 70;
-    }
-    [zoom=13] {
-      text-size: @text_font_size_xsm;
-      text-spacing: 100;
-      text-wrap-width: 70;
-    }
-    [zoom=14] {
-      text-size: @text_font_size_xsm;
-      text-spacing: 100;
-      text-wrap-width: 70;
-    }
-    [zoom>=15] {
-      text-size: @text_font_size_sm;
-      text-spacing: 100;
-      text-wrap-width: 40; 
-    }
-  }
-}
-*/
 
 #green-areas-labels-low,
 #green-areas-labels-med,
@@ -124,7 +38,7 @@ Map {
   [zoom=16][area>10000],
   [zoom>=17] {
     text-name: [name];
-    text-face-name: "PT Sans Narrow Regular";
+    text-face-name: "Caslon Antique Italic";
     text-placement: interior;
     text-wrap-width: 96;
     text-wrap-before: true;
@@ -134,12 +48,6 @@ Map {
 
     [zoom>=11] {
       text-fill: #586e50;
-      text-halo-fill: #d8f1ce;
-      text-halo-radius: 2;
-    }
-
-    [zoom>=12] {
-      text-halo-fill: #f7f7dc;
     }
 
     [zoom>=15] {
@@ -151,60 +59,12 @@ Map {
 #continents
 {
   text-name: [name];
-  text-face-name: "PT Sans Narrow Regular";
+  text-face-name: "Caslon Antique Regular";
   text-wrap-width: 32;
   text-size: 32;
   text-line-spacing: -12;
-  text-fill: black;
+  text-fill: #2e2115;
 }
-
-/*
-#admin1-labels-50m-z4 {
-  text-face-name: @text_font_administrative;
-  text-wrap-width: 80;
-  text-fill: @label_color_administrative;
-  text-halo-radius: @text_font_halo_radius_large;
-  text-halo-fill: @label_color_administrative_halo; 
-  text-name: "[label_z4]";
-  text-size: 16;
-}
-*/
-
-/*
-#admin1-labels-50m-z5 {
-  text-face-name: @text_font_administrative;
-  text-wrap-width: 80;
-  text-fill: @label_color_administrative;
-  text-halo-radius: @text_font_halo_radius_large;
-  text-halo-fill: @label_color_administrative_halo; 
-  text-name: "[label_z5]";
-  text-size:  @text_font_size_medium_plus;
-}
-*/
-
-/*
-#admin1-labels-50m-z6 {
-  text-face-name: @text_font_administrative;
-  text-wrap-width: 80;
-  text-fill: @label_color_administrative;
-  text-halo-radius: @text_font_halo_radius_large;
-  text-halo-fill: @label_color_administrative_halo; 
-  text-name: "[label_z6]";
-  text-size:  @text_font_size_large;
-}
-*/
-
-/*
-#admin1-labels-50m-z7 {
-  text-face-name: @text_font_administrative;
-  text-wrap-width: 80;
-  text-fill: @label_color_administrative;
-  text-halo-radius: @text_font_halo_radius_large;
-  text-halo-fill: @label_color_administrative_halo; 
-  text-name: "[label_z7]";
-  text-size:  @text_font_size_large;
-}
-*/
 
 #admin0-labels-z3[longfrom>3] {
     text-name: "[shortname]";
@@ -212,8 +72,6 @@ Map {
     text-wrap-width: 80;
     text-size: 18;
     text-fill: @label_color_administrative;
-    text-halo-radius: @text_font_halo_radius_large;
-    text-halo-fill: @label_color_administrative_halo;
     text-min-distance: 5;
 }
 
@@ -224,86 +82,32 @@ Map {
     text-line-spacing: -8;
     text-wrap-width: 100;
     text-fill: @label_color_administrative;
-    text-halo-radius: @text_font_halo_radius_large;
-    text-halo-fill: @label_color_administrative_halo;
 }
 
 #admin0-labels-z4 {
     text-name: [name];
-    text-face-name: "PT Sans Regular";
+    text-face-name: @text_font_administrative;
     text-wrap-width: 80;
     text-size: 24;
     text-min-distance: 15;
     text-fill: @label_color_administrative;
-    text-halo-radius: @text_font_halo_radius_large;
-    text-halo-fill: @label_color_administrative_halo;
 }
 
 #admin0-labels-z5 {
   text-name: [name];
-  text-face-name: "PT Sans Regular";
+  text-face-name: @text_font_administrative;
   text-wrap-width: 80;
   text-size: 24;
   text-fill: @label_color_administrative;
-  text-halo-radius: @text_font_halo_radius_large;
-  text-halo-fill: @label_color_administrative_halo;
 }
 
 #admin0-labels-z6 {
   text-name: [name];
-  text-face-name: "PT Sans Regular";
+  text-face-name: @text_font_administrative;
   text-wrap-width: 80;
   text-size: 24;
   text-fill: @label_color_administrative;
-  text-halo-radius: @text_font_halo_radius_large;
-  text-halo-fill: @label_color_administrative_halo;
 }
-
-// HACK! All the problematic water bodies with accents
-// e.g. "Bahia de Campeche" with an accented i,
-// have an empty "changed" string. So abuse this for now.
-
-/*
-#ne_110m_geography_marine_polys[zoom=2][scalerank=0][changed!=''],
-#ne_110m_geography_marine_polys[zoom=3][changed!=''],
-#ne_50m_geography_marine_polys[zoom=4][scalerank<4][changed!=''] {
-  text-name: [name];
-
-  [namealt!=''] {
-    text-name: [name] + '\n(' + [namealt] + ')';
-  }
-
-  text-face-name: @text_font_water_bold;
-  text-wrap-width: 80;
-  text-size: @text_font_size_medium;
-  text-fill: @label_color_physical;
-  text-halo-radius: @text_font_halo_radius_sm;
-  text-halo-fill: @label_color_physical_halo;
-  text-line-spacing: -2;
-
-  [zoom=4][scalerank>2] {
-    text-face-name: @text_font_water;
-    text-size: @text_font_size_xsm;
-  }
-}
-*/
-
-/*
-#ne_50m_geography_marine_polys[zoom=5][changed!=''],
-#ne_10m_geography_marine_polys[zoom>=6][zoom<=8][changed!='']
-{
-    text-name: [name];
-    [namealt!=''] {
-      text-name: [name] + '\n(' + [namealt] + ')';
-    }
-    text-face-name: @text_font_water;
-    text-wrap-width: 80;
-    text-size: @text_font_size_sm;
-    text-fill: @label_color_physical;
-    text-halo-radius: @text_font_halo_radius_sm;
-    text-halo-fill: @label_color_physical_halo;
-}
-*/
 
 #city_labels_z4,
 #city_labels_z5,
@@ -316,23 +120,23 @@ Map {
   text-min-distance: 5;
 
   [zoom>=4] {
-    text-size: 14;
+    text-size: 16;
   }
 
   [zoom>=6] {
-    text-size: 15;
+    text-size: 17;
   }
 
   [font_size=14] {
-    text-size: 18;
-  }
-
-  [font_size=16] {
     text-size: 19;
   }
 
-  [font_size=18] {
+  [font_size=16] {
     text-size: 20;
+  }
+
+  [font_size=18] {
+    text-size: 21;
   }
 }
 
@@ -342,7 +146,8 @@ Map {
   text-vertical-alignment: bottom;
   text-face-name: @text_font_city;
   text-fill: @label_color_city;
-  text-size: @text_font_size_sm;
+  text-size: 13;
+  text-min-distance: 5;
 
   [zoom>=7] {
     text-size: 16;
@@ -357,7 +162,7 @@ Map {
   }
 
   [font_size=20] {
-    text-size: 24;
+    text-size: 23;
   }
 }
 
@@ -371,11 +176,6 @@ Map {
   [font_size=20] {
     text-size: 32;
   }
-
-  [zoom>=12] {
-    text-halo-fill: #f7f7e6;
-    text-halo-radius: 2;
-  }
 }
 
 #city_points_z4,
@@ -383,17 +183,9 @@ Map {
 #city_points_z6,
 #city_points_z7,
 #city_points_z8 {
-  // outline merged points rather than stacking them
-  ::outline {
-    marker-ignore-placement: true;
-    marker-width: 7;
-    marker-fill: white;
-    marker-line-width: 0;
-  }
-
   marker-ignore-placement: true;
   marker-width: 5;
-  marker-fill: black;
+  marker-fill: #2e2115;
   marker-line-width: 0;
 }
 
