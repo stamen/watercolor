@@ -1,6 +1,7 @@
-@text_font_transport: 'Caslon Antique Regular';
-@text_font_administrative: 'Caslon Antique Regular';
-@text_font_city: 'Caslon Antique Regular';
+@text_font_transport: 'CaslonAntiqueVL Regular';
+@text_font_administrative: 'CaslonAntiqueVL Regular';
+@text_font_city: 'CaslonAntiqueVL Regular';
+@text_font_parks: 'Caslon Antique Italic';
 
 @label_color_transport: #524c4c;
 @label_color_administrative: #2e2115;
@@ -16,7 +17,7 @@ Map {
 {
   text-name: [name];
   text-face-name: @text_font_transport;
-  text-size: 18;
+  text-size: 16;
   text-placement: line;
   text-max-char-angle-delta: 20;
   text-fill: #444;
@@ -38,7 +39,7 @@ Map {
   [zoom=16][area>10000],
   [zoom>=17] {
     text-name: [name];
-    text-face-name: "Caslon Antique Italic";
+    text-face-name: @text_font_parks;
     text-placement: interior;
     text-wrap-width: 96;
     text-wrap-before: true;
@@ -51,7 +52,8 @@ Map {
     }
 
     [zoom>=15] {
-      text-size: 18;
+      text-size: 20;
+      text-line-spacing: -7;
     }
   }
 }
@@ -59,7 +61,7 @@ Map {
 #continents
 {
   text-name: [name];
-  text-face-name: "Caslon Antique Regular";
+  text-face-name: @text_font_administrative;
   text-wrap-width: 32;
   text-size: 32;
   text-line-spacing: -12;
