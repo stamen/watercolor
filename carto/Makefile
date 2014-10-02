@@ -23,8 +23,8 @@ land: data/osmdata/land-polygons-complete-3857.zip data/osmdata/simplified-land-
 	unzip -o data/osmdata/simplified-land-polygons-complete-3857.zip -d shp/
 	shapeindex shp/simplified-land-polygons-complete-3857/simplified_land_polygons.shp
 
-%.mml: %.yml .env
-	cat $< | (set -a && source .env && interp) > $@
+%.mml: %.yml .env *.mss
+	@cat $< | (set -a && source .env && interp) | js-yaml > $@
 
 %.xml: %.mml
 	carto -l $< > $@
