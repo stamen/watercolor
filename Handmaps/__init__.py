@@ -104,7 +104,7 @@ class Provider:
             prov = self.layer.config.layers[layer].provider
 
             for attempt in count():
-                mapnik_area = prov.renderArea(width, height, srs, xmin, ymin, xmax, ymax, zoom)      
+                mapnik_area = prov.renderArea(width, height, srs, xmin, ymin, xmax, ymax, zoom).image()
                 mapnik_alpha = mapnik_area.getpixel((0,0))[-1]
                 if mapnik_alpha != 0:
                     break
