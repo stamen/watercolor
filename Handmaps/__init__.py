@@ -2,7 +2,6 @@ from PIL import Image, ImageChops
 from functions import arr2img, watercolorize, get_outlines, get_shadows, simplemask, get_color_masks
 import json
 import TileStache
-from TileStache.Providers import Mapnik
 from ModestMaps.Core import Point
 import os
 import numpy
