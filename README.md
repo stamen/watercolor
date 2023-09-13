@@ -1,14 +1,20 @@
 Watercolor
 =====
 
-Stub README file for Stamen's Watercolor tiles. This repo originally existed in subversion and was moved to git by Seth Fitzsimmons on June 28, 2013. Alan McConchie is updating and documenting Watercolor for 2013.
+This repo originally existed in subversion and was moved to git by Seth Fitzsimmons on June 28, 2013. Alan McConchie did some updates and documentation of Watercolor for 2013.
+
+Originally, Stamen never planned to make this repository public (unlike the original Toner and Terrain) so there was never any documentation. But at some point, a few people were asking about it, so we switch the repo so anyone can view it, but documentation is still lacking.
+
+Also, there are a few different branches, and it's not clear which is the most useful if someone were to try to pick up Watercolor again today. Possibly useful branches are:
+* [deploy-2014](https://github.com/stamen/watercolor/tree/deploy-2014)
+* [mapisart](https://github.com/stamen/watercolor/tree/mapisart)
+* [watercolor-2013](https://github.com/stamen/watercolor/tree/watercolor-2013) 
 
 Getting Started
 --
 
 Watercolor is made up of several parts. Watercolor primarily uses data from two sources: Natural 
 Earth 2.0 and OpenStreetMap. 
-Here I will explain the parts in more detail. TODO: To be continued.
 
  Getting started with Watercolor involves three main stages:
 
