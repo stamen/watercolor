@@ -3,7 +3,7 @@ Watercolor
 
 This repo originally existed in subversion and was moved to git by Seth Fitzsimmons on June 28, 2013. Alan McConchie did some updates and documentation of Watercolor for 2013.
 
-Originally, Stamen never planned to make this repository public (unlike the original Toner and Terrain) so there was never any documentation. But at some point, a few people were asking about it, so we switched the repo so anyone can view it, but documentation is still lacking.
+Originally, Stamen never planned to make this repository public (unlike the original [Toner](https://github.com/stamen/toner-carto) and [Terrain](https://github.com/stamen/terrain-classic) styles) so there was never any documentation. But at some point, a few people were asking about it, so we switched the repo so anyone can view it, but documentation is still lacking.
 
 Also, there are a few different branches, and it's not clear which is the best place to start if someone were to try to pick up Watercolor again today. Possibly useful branches are:
 * [deploy-2014](https://github.com/stamen/watercolor/tree/deploy-2014)
