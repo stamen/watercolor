@@ -8,7 +8,13 @@ Originally, Stamen never planned to make this repository public (unlike the orig
 Also, there are a few different branches, and it's not clear which is the best place to start if someone were to try to pick up Watercolor again today. Possibly useful branches are:
 * [deploy-2014](https://github.com/stamen/watercolor/tree/deploy-2014)
 * [mapisart](https://github.com/stamen/watercolor/tree/mapisart)
-* [watercolor-2013](https://github.com/stamen/watercolor/tree/watercolor-2013) 
+* [watercolor-2013](https://github.com/stamen/watercolor/tree/watercolor-2013)
+
+You may also be interested in the version of the Watercolor code that is archived in the permanent collection of the Cooper Hewitt (the Smithsonian Design Museum). Their copy of the repository is here: https://github.com/CooperHewittCollection/watercolor
+
+If you are only interested in _using_ the archive of existing watercolor tiles (instead of trying to run this code to generate your own new tiles) you can access those tiles either from the Cooper Hewitt's servers, or via Stadia Maps.
+* Using the tiles via Cooper Hewitt: https://github.com/CooperHewittCollection/watercolor_examples
+* Using the tiles via Stadia Maps: https://stadiamaps.com/stamen/
 
 Getting Started
 --
