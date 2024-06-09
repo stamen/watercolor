@@ -16,6 +16,11 @@ If you are only interested in _using_ the archive of existing watercolor tiles (
 * Using the tiles via Cooper Hewitt: https://github.com/CooperHewittCollection/watercolor_examples
 * Using the tiles via Stadia Maps: https://stadiamaps.com/stamen/
 
+If you just want to learn more explanation about how we made this map, check out:
+* The original [annoucement blog post](https://stamen.com/maps-stamen-com-is-live-4e4dde30dd72/)
+* Our [Watercolor Process](https://stamen.com/watercolor-process-3dd5135861fe/) blog post
+* The [Watercolor Textures](https://stamen.com/watercolor-textures-15de97a4ad8b/) blog post
+
 Getting Started
 --
 
